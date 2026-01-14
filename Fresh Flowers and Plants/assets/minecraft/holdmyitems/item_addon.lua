@@ -1,24 +1,87 @@
--- Cyber and Sapling were here :3
+-- Cyber and Sapling were here :3		toss maing into the pile to
 local hand = context.hand
 local player = context.player
 local item = context.item
 local matrices = context.matrices
 local player = context.player
 local mainHand = context.mainHand
+local particles = context.particles
+local deltaTime = context.deltaTime
 
 global.pitchAngle = 0.0;
 global.yawAngle = 0.0;
 global.pitchAngleO = 0.0;
 global.yawAngleO = 0.0;
 
+global.maingDisableFireflies = true;
+global.fireflyDebounce = 0;
+global.fireflyID = 0;
+global.fireflyState = {};
+
 local ywAngle = (mainHand and yawAngle) or yawAngleO
 local ptAngle = (mainHand and pitchAngle) or pitchAngleO
+
+local time = P:getAge(player)
 
 local l = context.bl and 1 or -1
 
 local function noBlocksPlease(blocks)
     for _, id in ipairs(blocks) do
         renderAsBlock:put(id, false)
+    end
+end
+
+local function particleTickerFirefly(particle, id)
+    local state = fireflyState[id]
+    
+    local jitterAmp = 0.002
+    local jitterSpeed = 0.1
+    
+    if not state then        
+        state = {
+            radius = 0.0015 + math.random() * 0.0025,
+            angle = math.random() * 6.283,
+            speed = 0.02 + math.random() * 0.01,
+            axialTwist = 1 + math.random(),
+            axialAmplitude = 0.001 + math.random() * 0.005,
+            jitterPhaseX = math.random() * 6.283,
+            jitterPhaseY = math.random() * 6.283,
+            jitterPhaseZ = math.random() * 6.283,
+            expirationDate = time + 250,
+        }
+        
+        particle.dx = math.cos(state.angle) * state.radius
+        particle.dy = math.sin(state.angle * state.axialTwist) * state.axialAmplitude
+        particle.dz = math.sin(state.angle) * state.radius
+        
+        fireflyState[id] = state
+    end
+    
+    state.angle = state.angle + state.speed * deltaTime * 30
+    
+    local orbitX = math.cos(state.angle) * state.radius
+    local orbitY = math.sin(state.angle * state.axialTwist) * state.axialAmplitude
+    local orbitZ = math.sin(state.angle) * state.radius
+    
+    state.jitterPhaseX = state.jitterPhaseX + jitterSpeed * deltaTime * 30
+    state.jitterPhaseY = state.jitterPhaseY + jitterSpeed * deltaTime * 30
+    state.jitterPhaseZ = state.jitterPhaseZ + jitterSpeed * deltaTime * 30
+    
+    particle.dx = orbitX + math.sin(state.jitterPhaseX) * jitterAmp
+    particle.dy = orbitY + math.sin(state.jitterPhaseY) * jitterAmp
+    particle.dz = orbitZ + math.sin(state.jitterPhaseZ) * jitterAmp
+    
+    if not I:isOf(context.item, Items:get("minecraft:firefly_bush")) then
+        state.expirationDate = 0
+        particle.dead = true
+    end
+end
+
+-- Whatever you do, do not under any circumstances break this for loop, it WILL cause memoryleaks
+-- unless you remove the entire firefly ticker function
+for id, state in pairs(fireflyState) do
+    if time >= state.expirationDate then
+        fireflyState[id] = nil
     end
 end
 
@@ -169,6 +232,35 @@ if (
 	M:rotateZ(matrices, 5 * l)
 
 	M:scale(matrices, 1.1, 1.1, 1.1)
+
+	if I:isOf(item, Items:get("minecraft:firefly_bush")) then
+		local aliveCount = 0
+		for particle, state in pairs(fireflyState) do
+			if state then aliveCount = aliveCount + 1 end
+		end
+    
+		if time >= fireflyDebounce and aliveCount < 10 then
+			fireflyDebounce = time + math.random(40, 60)
+			fireflyID = fireflyID + 1
+			
+			particleManager:addParticle(particles,
+				false,
+				0, --posX
+				0.3, --posY
+				-0.04, --posZ
+				0, --deltaPosX
+				0, --deltaPosY
+				0, --deltaPosZ
+				0, --rotX
+				0, --rotY
+				0, --rotZ
+				0, --deltaRotX
+				0, --deltaRotY
+				0, --deltaRotZ
+				0.3 + math.random() * 0.1, --size
+				Texture:of("minecraft", "textures/particle/glowing_firefly.png"), "ITEM", hand, "OPACITY", "ADDITIVE", 30, 255, function(particle) particleTickerFirefly(particle, fireflyID) end)
+		end
+	end
 end
 
 -- Flowers
