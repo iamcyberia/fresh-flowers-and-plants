@@ -1,4 +1,11 @@
 -- Cyber and Sapling were here :3
+local hand = context.hand
+local player = context.player
+local item = context.item
+local matrices = context.matrices
+local player = context.player
+local mainHand = context.mainHand
+
 global.pitchAngle = 0.0;
 global.yawAngle = 0.0;
 global.pitchAngleO = 0.0;
@@ -7,7 +14,7 @@ global.yawAngleO = 0.0;
 local ywAngle = (mainHand and yawAngle) or yawAngleO
 local ptAngle = (mainHand and pitchAngle) or pitchAngleO
 
-local l = bl and 1 or -1
+local l = context.bl and 1 or -1
 
 local function noBlocksPlease(blocks)
     for _, id in ipairs(blocks) do

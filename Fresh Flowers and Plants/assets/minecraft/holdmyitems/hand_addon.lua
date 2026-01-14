@@ -1,3 +1,7 @@
+local item = context.item
+local matrices = context.matrices
+local mainHand = context.mainHand
+
 global.pitchAngle = 0.0;
 global.pitchAngleO = 0.0;
 global.yawAngle = 0.0;
