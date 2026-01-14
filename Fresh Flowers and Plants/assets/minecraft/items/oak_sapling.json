@@ -13,17 +13,8 @@
           "ground"
         ],
         "model": {
-          "type": "minecraft:composite",
-          "models": [
-            {
-              "type": "minecraft:model",
-              "model": "minecraft:item/oak_sapling_3d"
-            },
-            {
-              "type": "minecraft:model",
-              "model": "minecraft:item/oak_sapling_top"
-            }
-          ]
+          "type": "minecraft:model",
+          "model": "minecraft:item/oak_sapling_3d"
         }
       }
     ],

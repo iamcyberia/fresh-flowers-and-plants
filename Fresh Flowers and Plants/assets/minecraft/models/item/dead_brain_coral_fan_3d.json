@@ -3,7 +3,7 @@
 	"credit": "cyberia was here",
 	"textures": {
 		"0": "block/dead_brain_coral_fan",
-		"1": "item/sand_3d",
+		"1": "block/dead_brain_coral_block",
 		"particle": "block/dead_brain_coral_fan"
 	},
 	"elements": [
@@ -13,12 +13,12 @@
 			"to": [12, 6, 12],
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 2, 8]},
 			"faces": {
-				"north": {"uv": [0, 4, 4, 8], "texture": "#1"},
-				"east": {"uv": [0, 4, 4, 8], "texture": "#1"},
-				"south": {"uv": [0, 4, 4, 8], "texture": "#1"},
-				"west": {"uv": [0, 4, 4, 8], "texture": "#1"},
-				"up": {"uv": [4, 4, 0, 0], "texture": "#1"},
-				"down": {"uv": [4, 8, 0, 12], "texture": "#1"}
+				"north": {"uv": [8, 0, 16, 8], "texture": "#1"},
+				"east": {"uv": [8, 0, 16, 8], "texture": "#1"},
+				"south": {"uv": [8, 0, 16, 8], "texture": "#1"},
+				"west": {"uv": [8, 0, 16, 8], "texture": "#1"},
+				"up": {"uv": [16, 8, 8, 0], "texture": "#1"},
+				"down": {"uv": [8, 8, 0, 16], "texture": "#1"}
 			}
 		},
 		{
@@ -74,12 +74,10 @@
 			"scale": [0.375, 0.375, 0.375]
 		},
 		"firstperson_righthand": {
-			"rotation": [0, 1, 0],
 			"translation": [0, 4.25, 1.75],
 			"scale": [0.4, 0.4, 0.4]
 		},
 		"firstperson_lefthand": {
-			"rotation": [0, 1, 0],
 			"translation": [0, 4.25, 1.75],
 			"scale": [0.4, 0.4, 0.4]
 		},
