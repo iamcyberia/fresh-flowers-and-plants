@@ -3,10 +3,6 @@ global.pitchAngleO = 0.0;
 global.yawAngle = 0.0;
 global.yawAngleO = 0.0;
 
-local mainHand = context.mainHand
-local item = context.item
-local matrices = context.matrices
-
 local ptAngle = (mainHand and pitchAngle) or pitchAngleO
 local ywAngle = (mainHand and yawAngle) or yawAngleO
 
