@@ -1,0 +1,12 @@
+{
+  "Lua.runtime.path": ["?.lua", "?/init.lua"],
+  "Lua.workspace.library": ["."],
+  "Lua.workspace.ignoreDir": [".git"],
+  "Lua.intelliSense.enabled": true,
+  "Lua.intelliSense.searchDepth": 2,
+  "Lua.hint.enable": true,
+  "Lua.hint.paramType": true,
+  "Lua.hint.paramName": true,
+  "Lua.hover.expandAlias": true,
+  "Lua.signatureHelp.enable": true
+}

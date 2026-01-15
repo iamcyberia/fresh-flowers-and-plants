@@ -36,7 +36,7 @@ local function particleTickerFirefly(particle, id)
     local jitterAmp = 0.002
     local jitterSpeed = 0.1
     
-    if not state then        
+    if not state then
         state = {
             radius = 0.0015 + math.random() * 0.0025,
             angle = math.random() * 6.283,
@@ -48,28 +48,28 @@ local function particleTickerFirefly(particle, id)
             jitterPhaseZ = math.random() * 6.283,
             expirationDate = time + 250,
         }
-        
+
         particle.dx = math.cos(state.angle) * state.radius
         particle.dy = math.sin(state.angle * state.axialTwist) * state.axialAmplitude
         particle.dz = math.sin(state.angle) * state.radius
-        
+
         fireflyState[id] = state
     end
-    
+
     state.angle = state.angle + state.speed * deltaTime * 30
-    
+
     local orbitX = math.cos(state.angle) * state.radius
     local orbitY = math.sin(state.angle * state.axialTwist) * state.axialAmplitude
     local orbitZ = math.sin(state.angle) * state.radius
-    
+
     state.jitterPhaseX = state.jitterPhaseX + jitterSpeed * deltaTime * 30
     state.jitterPhaseY = state.jitterPhaseY + jitterSpeed * deltaTime * 30
     state.jitterPhaseZ = state.jitterPhaseZ + jitterSpeed * deltaTime * 30
-    
+
     particle.dx = orbitX + math.sin(state.jitterPhaseX) * jitterAmp
     particle.dy = orbitY + math.sin(state.jitterPhaseY) * jitterAmp
     particle.dz = orbitZ + math.sin(state.jitterPhaseZ) * jitterAmp
-    
+
     if not I:isOf(context.item, Items:get("minecraft:firefly_bush")) then
         state.expirationDate = 0
         particle.dead = true
@@ -125,7 +125,7 @@ noBlocksPlease({
     "minecraft:short_dry_grass",
     "minecraft:tall_dry_grass",
     "minecraft:dead_bush",
-	
+
 	-- Mushrooms
 	"minecraft:red_mushroom",
     "minecraft:brown_mushroom",
@@ -225,7 +225,7 @@ if (
 	M:moveY(matrices, 0.05)
 	M:moveX(matrices, -0.1 * l)
 	M:moveZ(matrices, 0.05)
-	
+
 	M:rotateX(matrices, -20)
 	M:rotateY(matrices, 45)
 	M:rotateZ(matrices, 5 * l)
@@ -237,11 +237,11 @@ if (
 		for particle, state in pairs(fireflyState) do
 			if state then aliveCount = aliveCount + 1 end
 		end
-    
+
 		if time >= fireflyDebounce and aliveCount < 10 then
 			fireflyDebounce = time + math.random(40, 60)
 			fireflyID = fireflyID + 1
-			
+
 			particleManager:addParticle(particles,
 				false,
 				0, --posX
@@ -288,7 +288,6 @@ if (
 	I:isOf(item, Items:get("minecraft:pitcher_plant")) or
 	I:isOf(item, Items:get("minecraft:big_dripleaf")) or
 	I:isOf(item, Items:get("minecraft:small_dripleaf"))
-	
 ) then
 	M:moveX(matrices, 0 * l)
     M:moveY(matrices, 0)
