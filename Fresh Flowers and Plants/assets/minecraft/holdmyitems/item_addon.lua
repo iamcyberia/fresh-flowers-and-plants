@@ -1,6 +1,5 @@
 -- Cyber and Sapling were here :3		toss maing into the pile to
 local hand = context.hand
-local player = context.player
 local item = context.item
 local matrices = context.matrices
 local player = context.player
