@@ -1,14 +1,5 @@
 local item = context.item
 local matrices = context.matrices
-local mainHand = context.mainHand
-
-global.pitchAngle = 0.0;
-global.pitchAngleO = 0.0;
-global.yawAngle = 0.0;
-global.yawAngleO = 0.0;
-
-local ptAngle = (mainHand and pitchAngle) or pitchAngleO
-local ywAngle = (mainHand and yawAngle) or yawAngleO
 
 if (
 	I:isOf(item, Items:get("minecraft:weeping_vines")) or

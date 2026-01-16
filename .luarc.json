@@ -1,6 +1,6 @@
 {
   "Lua.runtime.path": ["?.lua", "?/init.lua"],
-  "Lua.workspace.library": ["."],
+  "Lua.workspace.library": ["./holdmyitems.lua"],
   "Lua.workspace.ignoreDir": [".git"],
   "Lua.intelliSense.enabled": true,
   "Lua.intelliSense.searchDepth": 2,
