@@ -9,12 +9,20 @@
           "firstperson_lefthand",
           "thirdperson_righthand",
           "thirdperson_lefthand",
-          "head",
-          "ground"
+          "head"
         ],
         "model": {
-          "type": "minecraft:model",
-          "model": "minecraft:item/dead_bush_3d"
+          "type": "minecraft:composite",
+          "models": [
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/dead_bush_top_3d"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/dead_bush_bottom_3d"
+            }
+          ]
         }
       }
     ],

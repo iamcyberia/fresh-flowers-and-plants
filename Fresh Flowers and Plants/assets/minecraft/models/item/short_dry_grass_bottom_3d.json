@@ -2,40 +2,18 @@
 	"format_version": "1.21.6",
 	"credit": "cyberia was here",
 	"textures": {
-		"0": "block/warped_roots",
-		"1": "item/warped_nylium_3d",
-		"2": "item/warped_sapling_roots_3d",
-		"particle": "block/warped_roots"
+		"1": "item/sand_3d",
+		"4": "item/sapling_roots_3d"
 	},
 	"elements": [
-		{
-			"from": [8, 6, 2.6],
-			"to": [8, 18, 13.4],
-			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 12, 8], "rescale": true},
-			"faces": {
-				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#0"}
-			}
-		},
-		{
-			"from": [2.6, 6, 8],
-			"to": [13.4, 18, 8],
-			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 12, 8], "rescale": true},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#0"}
-			}
-		},
 		{
 			"from": [8, -14, 2.6],
 			"to": [8, -2, 13.4],
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, -8, 8], "rescale": true},
 			"faces": {
-				"east": {"uv": [0, 0, 16, 16], "texture": "#2"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#2"}
+				"east": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#4"}
 			}
 		},
 		{
@@ -44,8 +22,8 @@
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, -8, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#2"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#2"}
+				"north": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#4"}
 			}
 		},
 		{
