@@ -23,7 +23,9 @@ local ptAngle = (mainHand and pitchAngle) or pitchAngleO
 
 local time = P:getAge(player)
 
-local l = context.bl and 1 or -1
+local handMirror = context.bl and 1 or -1
+
+
 
 local function noBlocksPlease(blocks)
     for _, id in ipairs(blocks) do
@@ -88,33 +90,33 @@ end
 noBlocksPlease({
 
 	-- Saplings
-    "minecraft:oak_sapling",
-    "minecraft:spruce_sapling",
-    "minecraft:birch_sapling",
-    "minecraft:jungle_sapling",
     "minecraft:acacia_sapling",
-    "minecraft:dark_oak_sapling",
-    "minecraft:mangrove_propagule",
+    "minecraft:birch_sapling",
     "minecraft:cherry_sapling",
+    "minecraft:dark_oak_sapling",
+    "minecraft:jungle_sapling",
+    "minecraft:mangrove_propagule",
+    "minecraft:oak_sapling",
     "minecraft:pale_oak_sapling",
+    "minecraft:spruce_sapling",
 
 	-- More Plants
 	"minecraft:bamboo",
+	"minecraft:vine",
+    "minecraft:azalea",
+    "minecraft:big_dripleaf",
+    "minecraft:flowering_azalea",
+    "minecraft:glow_lichen",
+    "minecraft:hanging_roots",
     "minecraft:kelp",
-    "minecraft:sugar_cane",
+    "minecraft:lily_pad",
+    "minecraft:pale_hanging_moss",
+    "minecraft:sculk_vein",
     "minecraft:sea_pickle",
     "minecraft:seagrass",
-    "minecraft:lily_pad",
-    "minecraft:big_dripleaf",
     "minecraft:small_dripleaf",
-	"minecraft:vine",
-    "minecraft:glow_lichen",
-    "minecraft:sculk_vein",
     "minecraft:spore_blossom",
-    "minecraft:hanging_roots",
-    "minecraft:pale_hanging_moss",
-    "minecraft:azalea",
-    "minecraft:flowering_azalea",
+    "minecraft:sugar_cane",
 
 	-- Even More Plants
 	"minecraft:short_grass",
@@ -159,24 +161,24 @@ noBlocksPlease({
 
 	-- Corals
 	"minecraft:tube_coral",
-    "minecraft:brain_coral_fan",
     "minecraft:brain_coral",
-    "minecraft:bubble_coral_fan",
+    "minecraft:brain_coral_fan",
     "minecraft:bubble_coral",
-    "minecraft:dead_brain_coral_fan",
+    "minecraft:bubble_coral_fan",
     "minecraft:dead_brain_coral",
-    "minecraft:dead_bubble_coral_fan",
+    "minecraft:dead_brain_coral_fan",
     "minecraft:dead_bubble_coral",
-    "minecraft:dead_fire_coral_fan",
+    "minecraft:dead_bubble_coral_fan",
     "minecraft:dead_fire_coral",
-    "minecraft:dead_horn_coral_fan",
+    "minecraft:dead_fire_coral_fan",
     "minecraft:dead_horn_coral",
-    "minecraft:dead_tube_coral_fan",
+    "minecraft:dead_horn_coral_fan",
     "minecraft:dead_tube_coral",
-    "minecraft:fire_coral_fan",
+    "minecraft:dead_tube_coral_fan",
     "minecraft:fire_coral",
-    "minecraft:horn_coral_fan",
+    "minecraft:fire_coral_fan",
     "minecraft:horn_coral",
+    "minecraft:horn_coral_fan",
     "minecraft:tube_coral_fan",
 
 	-- Nether Plants
@@ -196,17 +198,17 @@ if (
 	I:isOf(item, Items:get("minecraft:cherry_sapling")) or
 	I:isOf(item, Items:get("minecraft:crimson_roots")) or
 	I:isOf(item, Items:get("minecraft:dark_oak_sapling")) or
-	I:isOf(item, Items:get("minecraft:dead_brain_coral_fan")) or
 	I:isOf(item, Items:get("minecraft:dead_brain_coral")) or
-	I:isOf(item, Items:get("minecraft:dead_bubble_coral_fan")) or
+	I:isOf(item, Items:get("minecraft:dead_brain_coral_fan")) or
 	I:isOf(item, Items:get("minecraft:dead_bubble_coral")) or
+	I:isOf(item, Items:get("minecraft:dead_bubble_coral_fan")) or
 	I:isOf(item, Items:get("minecraft:dead_bush")) or
-	I:isOf(item, Items:get("minecraft:dead_fire_coral_fan")) or
 	I:isOf(item, Items:get("minecraft:dead_fire_coral")) or
-	I:isOf(item, Items:get("minecraft:dead_horn_coral_fan")) or
+	I:isOf(item, Items:get("minecraft:dead_fire_coral_fan")) or
 	I:isOf(item, Items:get("minecraft:dead_horn_coral")) or
-	I:isOf(item, Items:get("minecraft:dead_tube_coral_fan")) or
+	I:isOf(item, Items:get("minecraft:dead_horn_coral_fan")) or
 	I:isOf(item, Items:get("minecraft:dead_tube_coral")) or
+	I:isOf(item, Items:get("minecraft:dead_tube_coral_fan")) or
 	I:isOf(item, Items:get("minecraft:fern")) or
 	I:isOf(item, Items:get("minecraft:firefly_bush")) or
 	I:isOf(item, Items:get("minecraft:flowering_azalea")) or
@@ -224,12 +226,12 @@ if (
 	I:isOf(item, Items:get("minecraft:warped_roots"))
 ) then
 	M:moveY(matrices, 0.05)
-	M:moveX(matrices, -0.1 * l)
+	M:moveX(matrices, -0.1 * handMirror)
 	M:moveZ(matrices, 0.05)
 
 	M:rotateX(matrices, -20)
-	M:rotateY(matrices, 45 * l)
-	M:rotateZ(matrices, 5 * l)
+	M:rotateY(matrices, 45 * handMirror)
+	M:rotateZ(matrices, 5 * handMirror)
 
 	M:scale(matrices, 1.1, 1.1, 1.1)
 
@@ -297,18 +299,18 @@ end
 
 -- Corals
 if (
-	I:isOf(item, Items:get("minecraft:tube_coral")) or
 	I:isOf(item, Items:get("minecraft:brain_coral")) or
-	I:isOf(item, Items:get("minecraft:bubble_coral")) or
-	I:isOf(item, Items:get("minecraft:fire_coral")) or
-	I:isOf(item, Items:get("minecraft:horn_coral")) or
-	I:isOf(item, Items:get("minecraft:tube_coral_fan")) or
 	I:isOf(item, Items:get("minecraft:brain_coral_fan")) or
+	I:isOf(item, Items:get("minecraft:bubble_coral")) or
 	I:isOf(item, Items:get("minecraft:bubble_coral_fan")) or
+	I:isOf(item, Items:get("minecraft:fire_coral")) or
 	I:isOf(item, Items:get("minecraft:fire_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:horn_coral_fan"))
+	I:isOf(item, Items:get("minecraft:horn_coral")) or
+	I:isOf(item, Items:get("minecraft:horn_coral_fan")) or
+	I:isOf(item, Items:get("minecraft:tube_coral")) or
+	I:isOf(item, Items:get("minecraft:tube_coral_fan"))
 ) then
-	M:moveX(matrices, -0.15 * l)
+	M:moveX(matrices, -0.15 * handMirror)
     M:moveY(matrices, 0.15)
 	M:moveZ(matrices, 0.25)
 
@@ -317,32 +319,32 @@ end
 
 -- Seagrass
 if (I:isOf(item, Items:get("minecraft:seagrass"))) then
-	M:moveX(matrices, -0.15 * l)
+	M:moveX(matrices, -0.15 * handMirror)
     M:moveY(matrices, 0.2)
 	M:moveZ(matrices, 0.425)
 
     M:rotateX(matrices, -60)
-	M:rotateY(matrices, 5 * l)
-	M:rotateZ(matrices, 5 * l)
+	M:rotateY(matrices, 5 * handMirror)
+	M:rotateZ(matrices, 5 * handMirror)
 
 	M:scale(matrices, 0.9, 0.9, 0.9)
 end
 
 -- Kelp
 if (I:isOf(item, Items:get("minecraft:kelp")) ) then
-	M:moveX(matrices, 0.05 * l)
+	M:moveX(matrices, 0.05 * handMirror)
     M:moveY(matrices, -0.05)
 
     M:rotateX(matrices, -20)
-	M:rotateY(matrices, 8 * l)
-	M:rotateZ(matrices, -10 * l)
+	M:rotateY(matrices, 8 * handMirror)
+	M:rotateZ(matrices, -10 * handMirror)
 
 	M:scale(matrices, 1.2, 1.2, 1.2)
 end
 
 -- Sugar Cane
 if (I:isOf(item, Items:get("minecraft:sugar_cane")) ) then
-	M:moveX(matrices, 0.025 * l)
+	M:moveX(matrices, 0.025 * handMirror)
 	M:moveZ(matrices, -0.025)
 
 	M:scale(matrices, 0.9, 0.9, 0.9)
@@ -350,29 +352,29 @@ end
 
 -- Lily Pad
 if (I:isOf(item, Items:get("minecraft:lily_pad")) ) then
-	M:moveX(matrices, -0.15 * l)
+	M:moveX(matrices, -0.15 * handMirror)
     M:moveY(matrices, 0.1)
 	M:moveZ(matrices, 0.15)
 
-	M:rotateZ(matrices, 90 * l)
+	M:rotateZ(matrices, 90 * handMirror)
 
 	M:scale(matrices, 1.2, 1.2, 1.2)
 end
 
 -- Lily Pad
 if (I:isOf(item, Items:get("minecraft:vine")) ) then
-	M:moveX(matrices, 0.05 * l)
+	M:moveX(matrices, 0.05 * handMirror)
     M:moveY(matrices, -0.025)
 
     M:rotateX(matrices, 10)
-	M:rotateY(matrices, 10 * l)
+	M:rotateY(matrices, 10 * handMirror)
 end
 
 -- Weeping Vines, Hanging Roots, Pale Hanging Moss
 if (
-	I:isOf(item, Items:get("minecraft:weeping_vines")) or
 	I:isOf(item, Items:get("minecraft:hanging_roots")) or
-	I:isOf(item, Items:get("minecraft:pale_hanging_moss"))
+	I:isOf(item, Items:get("minecraft:pale_hanging_moss")) or
+	I:isOf(item, Items:get("minecraft:weeping_vines"))
 ) then
     M:moveY(matrices, -0.25)
 
