@@ -1,4 +1,0 @@
-{
-  "condition": "UseModelsWhenDropped",
-  "fallback": "assets/minecraft/items/2d_sprites/dead_fire_coral_fan.json"
-}
