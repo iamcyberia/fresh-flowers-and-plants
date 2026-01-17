@@ -1,4 +1,5 @@
 {
+	"format_version": "1.21.11",
 	"credit": "cyberia was here",
 	"textures": {
 		"0": "block/pink_tulip",
@@ -7,22 +8,42 @@
 	"elements": [
 		{
 			"from": [8, 0, 0.8],
+			"to": [8, 8, 15.2],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 8, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 8, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8, 8, 0.8],
 			"to": [8, 16, 15.2],
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
 			"faces": {
-				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#0"}
+				"east": {"uv": [0, 0, 16, 8], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#0"}
 			}
 		},
 		{
 			"from": [0.8, 0, 8],
+			"to": [15.2, 8, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [0.8, 8, 8],
 			"to": [15.2, 16, 8],
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#0"}
+				"north": {"uv": [0, 0, 16, 8], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#0"}
 			}
 		}
 	],
@@ -50,7 +71,7 @@
 			"scale": [0.375, 0.375, 0.375]
 		},
 		"gui": {
-			"rotation": [30, 180, 0]
+			"rotation": [30, -180, 0]
 		},
 		"head": {
 			"translation": [0, 11.5, 0],

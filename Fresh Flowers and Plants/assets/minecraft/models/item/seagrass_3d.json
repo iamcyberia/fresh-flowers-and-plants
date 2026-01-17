@@ -2,7 +2,7 @@
 	"format_version": "1.21.6",
 	"credit": "cyberia was here",
 	"textures": {
-		"1": "block/seagrass",
+		"1": "item/seagrass_3d",
 		"3": "item/tropical_water_3d",
 		"4": "item/underwater_sand_3d",
 		"5": "item/glass_bowl_3d",

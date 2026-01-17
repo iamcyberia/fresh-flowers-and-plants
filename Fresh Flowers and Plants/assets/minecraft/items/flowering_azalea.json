@@ -9,12 +9,20 @@
           "firstperson_lefthand",
           "thirdperson_righthand",
           "thirdperson_lefthand",
-          "head",
-          "ground"
+          "head"
         ],
         "model": {
-          "type": "minecraft:model",
-          "model": "minecraft:item/flowering_azalea_3d"
+          "type": "minecraft:composite",
+          "models": [
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/flowering_azalea_3d"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/azalea_block_3d"
+            }
+          ]
         }
       }
     ],

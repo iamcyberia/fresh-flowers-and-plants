@@ -2,9 +2,9 @@
 	"format_version": "1.21.6",
 	"credit": "cyberia was here",
 	"textures": {
-		"0": "block/glow_lichen",
+		"0": "item/glow_lichen",
 		"1": "item/glow_lichen_3d_emissive",
-		"particle": "block/glow_lichen"
+		"particle": "item/glow_lichen"
 	},
 	"elements": [
 		{

@@ -4,7 +4,7 @@
 	"textures": {
 		"0": "item/weeping_vines_3d",
 		"1": "item/weeping_vines_3d_emissive",
-		"2": "block/weeping_vines",
+		"2": "item/weeping_vines",
 		"particle": "item/weeping_vines_3d"
 	},
 	"elements": [
