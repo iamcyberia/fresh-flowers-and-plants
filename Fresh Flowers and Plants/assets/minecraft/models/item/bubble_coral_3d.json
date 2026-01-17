@@ -5,8 +5,8 @@
 		"3": "item/tropical_water_3d",
 		"4": "item/underwater_sand_3d",
 		"5": "item/glass_bowl_3d",
-		"6": "block/bubble_coral",
-		"particle": "item/underwater_sand_3d"
+		"6": "item/bubble_coral",
+		"particle": "item/bubble_coral"
 	},
 	"elements": [
 		{

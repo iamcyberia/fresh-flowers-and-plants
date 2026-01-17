@@ -3,8 +3,7 @@
 	"credit": "cyberia was here",
 	"textures": {
 		"0": "block/dead_tube_coral",
-		"1": "block/dead_tube_coral_block",
-		"particle": "block/dead_tube_coral"
+		"1": "block/dead_tube_coral_block"
 	},
 	"elements": [
 		{

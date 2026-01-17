@@ -1,12 +1,13 @@
 {
+	"format_version": "1.21.11",
 	"credit": "cyberia was here",
 	"textures": {
 		"3": "item/tropical_water_3d",
 		"4": "item/underwater_sand_3d",
 		"5": "item/glass_bowl_3d",
-		"6": "block/horn_coral_block",
-		"7": "block/horn_coral_fan",
-		"particle": "item/underwater_sand_3d"
+		"6": "item/horn_coral_block",
+		"7": "item/horn_coral_fan",
+		"particle": "item/horn_coral_fan"
 	},
 	"elements": [
 		{
