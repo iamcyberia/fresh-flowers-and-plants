@@ -16,6 +16,16 @@
 			}
 		},
 		{
+			"name": "hypocotyl",
+			"from": [8, 6, 7.25],
+			"to": [8, 12.75, 8.75],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 6, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [7, 7, 9, 16], "texture": "#1"},
+				"west": {"uv": [7, 7, 9, 16], "texture": "#1"}
+			}
+		},
+		{
 			"name": "leaves",
 			"from": [5.375, 12.75, 8],
 			"to": [10.625, 17.25, 8],
@@ -33,16 +43,6 @@
 			"faces": {
 				"east": {"uv": [4, 1, 11, 7], "texture": "#1"},
 				"west": {"uv": [4, 1, 11, 7], "texture": "#1"}
-			}
-		},
-		{
-			"name": "hypocotyl",
-			"from": [8, 6, 7.25],
-			"to": [8, 12.75, 8.75],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 6, 8], "rescale": true},
-			"faces": {
-				"east": {"uv": [7, 7, 9, 16], "texture": "#1"},
-				"west": {"uv": [7, 7, 9, 16], "texture": "#1"}
 			}
 		}
 	],

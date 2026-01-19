@@ -1,5 +1,6 @@
 -- Cyber and Sapling were here :3		toss maing into the pile to
 
+local bl = context.bl
 local hand = context.hand
 local item = context.item
 local matrices = context.matrices
@@ -20,10 +21,9 @@ global.fireflyState = {};
 
 local ywAngle = (mainHand and yawAngle) or yawAngleO
 local ptAngle = (mainHand and pitchAngle) or pitchAngleO
+local handMirror = bl and 1 or -1
 
 local time = P:getAge(player)
-
-local handMirror = context.bl and 1 or -1
 
 
 
@@ -31,6 +31,14 @@ local function noBlocksPlease(blocks)
     for _, id in ipairs(blocks) do
         renderAsBlock:put(id, false)
     end
+end
+
+local function checkList(list)
+	for _, entry in ipairs(list) do
+		if I:isOf(item, Items:get(entry)) then
+			return true
+		end
+	end
 end
 
 local function particleTickerFirefly(particle, id)
@@ -88,7 +96,6 @@ for id, state in pairs(fireflyState) do
 end
 
 noBlocksPlease({
-
 	-- Saplings
     "minecraft:acacia_sapling",
     "minecraft:birch_sapling",
@@ -189,42 +196,94 @@ noBlocksPlease({
     "minecraft:weeping_vines",
 })
 
--- Plants on a Block of Dirt
-if (
-	I:isOf(item, Items:get("minecraft:acacia_sapling")) or
-	I:isOf(item, Items:get("minecraft:azalea")) or
-	I:isOf(item, Items:get("minecraft:birch_sapling")) or
-	I:isOf(item, Items:get("minecraft:bush")) or
-	I:isOf(item, Items:get("minecraft:cherry_sapling")) or
-	I:isOf(item, Items:get("minecraft:crimson_roots")) or
-	I:isOf(item, Items:get("minecraft:dark_oak_sapling")) or
-	I:isOf(item, Items:get("minecraft:dead_brain_coral")) or
-	I:isOf(item, Items:get("minecraft:dead_brain_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:dead_bubble_coral")) or
-	I:isOf(item, Items:get("minecraft:dead_bubble_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:dead_bush")) or
-	I:isOf(item, Items:get("minecraft:dead_fire_coral")) or
-	I:isOf(item, Items:get("minecraft:dead_fire_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:dead_horn_coral")) or
-	I:isOf(item, Items:get("minecraft:dead_horn_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:dead_tube_coral")) or
-	I:isOf(item, Items:get("minecraft:dead_tube_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:fern")) or
-	I:isOf(item, Items:get("minecraft:firefly_bush")) or
-	I:isOf(item, Items:get("minecraft:flowering_azalea")) or
-	I:isOf(item, Items:get("minecraft:jungle_sapling")) or
-	I:isOf(item, Items:get("minecraft:large_fern")) or
-	I:isOf(item, Items:get("minecraft:mangrove_propagule")) or
-	I:isOf(item, Items:get("minecraft:nether_sprouts")) or
-	I:isOf(item, Items:get("minecraft:oak_sapling")) or
-	I:isOf(item, Items:get("minecraft:pale_oak_sapling")) or
-	I:isOf(item, Items:get("minecraft:short_dry_grass")) or
-	I:isOf(item, Items:get("minecraft:short_grass")) or
-	I:isOf(item, Items:get("minecraft:spruce_sapling")) or
-	I:isOf(item, Items:get("minecraft:tall_dry_grass")) or
-	I:isOf(item, Items:get("minecraft:tall_grass")) or
-	I:isOf(item, Items:get("minecraft:warped_roots"))
-) then
+local plantsOnDirt = {
+	"minecraft:acacia_sapling",
+	"minecraft:azalea",
+	"minecraft:birch_sapling",
+	"minecraft:bush",
+	"minecraft:cherry_sapling",
+	"minecraft:crimson_roots",
+	"minecraft:dark_oak_sapling",
+	"minecraft:dead_brain_coral",
+	"minecraft:dead_brain_coral_fan",
+	"minecraft:dead_bubble_coral",
+	"minecraft:dead_bubble_coral_fan",
+	"minecraft:dead_bush",
+	"minecraft:dead_fire_coral",
+	"minecraft:dead_fire_coral_fan",
+	"minecraft:dead_horn_coral",
+	"minecraft:dead_horn_coral_fan",
+	"minecraft:dead_tube_coral",
+	"minecraft:dead_tube_coral_fan",
+	"minecraft:fern",
+	"minecraft:firefly_bush",
+	"minecraft:flowering_azalea",
+	"minecraft:jungle_sapling",
+	"minecraft:large_fern",
+	"minecraft:mangrove_propagule",
+	"minecraft:nether_sprouts",
+	"minecraft:oak_sapling",
+	"minecraft:pale_oak_sapling",
+	"minecraft:short_dry_grass",
+	"minecraft:short_grass",
+	"minecraft:spruce_sapling",
+	"minecraft:tall_dry_grass",
+	"minecraft:tall_grass",
+	"minecraft:warped_roots",
+}
+
+local flowers = {
+	"minecraft:allium",
+	"minecraft:azure_bluet",
+	"minecraft:big_dripleaf",
+	"minecraft:blue_orchid",
+	"minecraft:cactus_flower",
+	"minecraft:closed_eyeblossom",
+	"minecraft:cornflower",
+	"minecraft:dandelion",
+	"minecraft:lilac",
+	"minecraft:lily_of_the_valley",
+	"minecraft:open_eyeblossom",
+	"minecraft:orange_tulip",
+	"minecraft:oxeye_daisy",
+	"minecraft:peony",
+	"minecraft:pink_tulip",
+	"minecraft:pitcher_plant",
+	"minecraft:poppy",
+	"minecraft:red_tulip",
+	"minecraft:rose_bush",
+	"minecraft:small_dripleaf",
+	"minecraft:sunflower",
+	"minecraft:torchflower",
+	"minecraft:white_tulip",
+	"minecraft:wither_rose",
+}
+
+local corals = {
+	"minecraft:brain_coral",
+	"minecraft:brain_coral_fan",
+	"minecraft:bubble_coral",
+	"minecraft:bubble_coral_fan",
+	"minecraft:fire_coral",
+	"minecraft:fire_coral_fan",
+	"minecraft:horn_coral",
+	"minecraft:horn_coral_fan",
+	"minecraft:tube_coral",
+	"minecraft:tube_coral_fan",
+}
+
+local vineStuff = {
+	"minecraft:hanging_roots",
+	"minecraft:pale_hanging_moss",
+	"minecraft:weeping_vines",
+}
+
+
+
+-- // Enourmous if statement of optimisation \\ --
+if (checkList(plantsOnDirt)) then
+	-- // Plants on a block of dirt \\ --
+
 	M:moveY(matrices, 0.05)
 	M:moveX(matrices, -0.1 * handMirror)
 	M:moveZ(matrices, 0.05)
@@ -237,7 +296,7 @@ if (
 
 	if I:isOf(item, Items:get("minecraft:firefly_bush")) then
 		local aliveCount = 0
-		for particle, state in pairs(fireflyState) do
+		for _, state in pairs(fireflyState) do
 			if state then aliveCount = aliveCount + 1 end
 		end
 
@@ -263,62 +322,31 @@ if (
 				Texture:of("minecraft", "textures/particle/glowing_firefly.png"), "ITEM", hand, "OPACITY", "ADDITIVE", 30, 255, function(particle) particleTickerFirefly(particle, fireflyID) end)
 		end
 	end
-end
+elseif checkList(flowers) then
+	-- // Flowers \\ --
 
--- Flowers
-if (
-	I:isOf(item, Items:get("minecraft:allium")) or
-	I:isOf(item, Items:get("minecraft:azure_bluet")) or
-	I:isOf(item, Items:get("minecraft:big_dripleaf")) or
-	I:isOf(item, Items:get("minecraft:blue_orchid")) or
-	I:isOf(item, Items:get("minecraft:cactus_flower")) or
-	I:isOf(item, Items:get("minecraft:closed_eyeblossom")) or
-	I:isOf(item, Items:get("minecraft:cornflower")) or
-	I:isOf(item, Items:get("minecraft:dandelion")) or
-	I:isOf(item, Items:get("minecraft:lilac")) or
-	I:isOf(item, Items:get("minecraft:lily_of_the_valley")) or
-	I:isOf(item, Items:get("minecraft:open_eyeblossom")) or
-	I:isOf(item, Items:get("minecraft:orange_tulip")) or
-	I:isOf(item, Items:get("minecraft:oxeye_daisy")) or
-	I:isOf(item, Items:get("minecraft:peony")) or
-	I:isOf(item, Items:get("minecraft:pink_tulip")) or
-	I:isOf(item, Items:get("minecraft:pitcher_plant")) or
-	I:isOf(item, Items:get("minecraft:poppy")) or
-	I:isOf(item, Items:get("minecraft:red_tulip")) or
-	I:isOf(item, Items:get("minecraft:rose_bush")) or
-	I:isOf(item, Items:get("minecraft:small_dripleaf")) or
-	I:isOf(item, Items:get("minecraft:sunflower")) or
-	I:isOf(item, Items:get("minecraft:torchflower")) or
-	I:isOf(item, Items:get("minecraft:white_tulip")) or
-	I:isOf(item, Items:get("minecraft:wither_rose"))
-) then
 	M:moveZ(matrices, 0.025)
 
 	M:scale(matrices, 1.1, 1.1, 1.1)
-end
+elseif checkList(corals) then
+	-- // Corals \\ --
 
--- Corals
-if (
-	I:isOf(item, Items:get("minecraft:brain_coral")) or
-	I:isOf(item, Items:get("minecraft:brain_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:bubble_coral")) or
-	I:isOf(item, Items:get("minecraft:bubble_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:fire_coral")) or
-	I:isOf(item, Items:get("minecraft:fire_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:horn_coral")) or
-	I:isOf(item, Items:get("minecraft:horn_coral_fan")) or
-	I:isOf(item, Items:get("minecraft:tube_coral")) or
-	I:isOf(item, Items:get("minecraft:tube_coral_fan"))
-) then
 	M:moveX(matrices, -0.15 * handMirror)
     M:moveY(matrices, 0.15)
 	M:moveZ(matrices, 0.25)
 
     M:rotateX(matrices, -65)
-end
+elseif checkList(vineStuff) then
+	-- // Weeping Vines, Hanging Roots, Pale Hanging Moss \\ --
 
--- Seagrass
-if (I:isOf(item, Items:get("minecraft:seagrass"))) then
+    M:moveY(matrices, -0.25)
+
+    M:rotateX(matrices, -90)
+    M:rotateX(matrices, M:clamp(P:getPitch(player) / 2.5, -20, 90) + ptAngle)
+	M:rotateZ(matrices, ywAngle * 0.5, 0, -0.13, 0)
+elseif I:isOf(item, Items:get("minecraft:seagrass")) then
+	-- // Seagrass \\ --
+
 	M:moveX(matrices, -0.15 * handMirror)
     M:moveY(matrices, 0.2)
 	M:moveZ(matrices, 0.425)
@@ -328,10 +356,9 @@ if (I:isOf(item, Items:get("minecraft:seagrass"))) then
 	M:rotateZ(matrices, 5 * handMirror)
 
 	M:scale(matrices, 0.9, 0.9, 0.9)
-end
+elseif I:isOf(item, Items:get("minecraft:kelp")) then
+	-- // Kelp \\ --
 
--- Kelp
-if (I:isOf(item, Items:get("minecraft:kelp")) ) then
 	M:moveX(matrices, 0.05 * handMirror)
     M:moveY(matrices, -0.05)
 
@@ -340,18 +367,16 @@ if (I:isOf(item, Items:get("minecraft:kelp")) ) then
 	M:rotateZ(matrices, -10 * handMirror)
 
 	M:scale(matrices, 1.2, 1.2, 1.2)
-end
+elseif I:isOf(item, Items:get("minecraft:sugar_cane")) then
+	-- // Sugar Cane \\ --
 
--- Sugar Cane
-if (I:isOf(item, Items:get("minecraft:sugar_cane")) ) then
 	M:moveX(matrices, 0.025 * handMirror)
 	M:moveZ(matrices, -0.025)
 
 	M:scale(matrices, 0.9, 0.9, 0.9)
-end
+elseif I:isOf(item, Items:get("minecraft:lily_pad")) then
+	-- // Lily Pad \\ --
 
--- Lily Pad
-if (I:isOf(item, Items:get("minecraft:lily_pad")) ) then
 	M:moveX(matrices, -0.15 * handMirror)
     M:moveY(matrices, 0.1)
 	M:moveZ(matrices, 0.15)
@@ -359,32 +384,17 @@ if (I:isOf(item, Items:get("minecraft:lily_pad")) ) then
 	M:rotateZ(matrices, 90 * handMirror)
 
 	M:scale(matrices, 1.2, 1.2, 1.2)
-end
+elseif I:isOf(item, Items:get("minecraft:vine")) then
+	-- // Normal Vine \\ --
 
--- Lily Pad
-if (I:isOf(item, Items:get("minecraft:vine")) ) then
 	M:moveX(matrices, 0.05 * handMirror)
     M:moveY(matrices, -0.025)
 
     M:rotateX(matrices, 10)
 	M:rotateY(matrices, 10 * handMirror)
-end
+elseif (I:isOf(item, Items:get("minecraft:spore_blossom"))) then
+	-- // Spore Blossom \\ --
 
--- Weeping Vines, Hanging Roots, Pale Hanging Moss
-if (
-	I:isOf(item, Items:get("minecraft:hanging_roots")) or
-	I:isOf(item, Items:get("minecraft:pale_hanging_moss")) or
-	I:isOf(item, Items:get("minecraft:weeping_vines"))
-) then
-    M:moveY(matrices, -0.25)
-
-    M:rotateX(matrices, -90)
-    M:rotateX(matrices, M:clamp(P:getPitch(player) / 2.5, -20, 90) + ptAngle)
-	M:rotateZ(matrices, ywAngle * 0.5, 0, -0.13, 0)
-end
-
--- Spore Blossom
-if (I:isOf(item, Items:get("minecraft:spore_blossom"))) then
     M:moveY(matrices, -0.2)
     M:rotateX(matrices, -70)
     M:rotateX(matrices, M:clamp(P:getPitch(player) / 2.5, -20, 90) + ptAngle)
