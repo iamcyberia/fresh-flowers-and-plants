@@ -95,6 +95,8 @@ for id, state in pairs(fireflyState) do
     end
 end
 
+
+
 noBlocksPlease({
 	-- Saplings
     "minecraft:acacia_sapling",
@@ -392,11 +394,13 @@ elseif I:isOf(item, Items:get("minecraft:vine")) then
 
     M:rotateX(matrices, 10)
 	M:rotateY(matrices, 10 * handMirror)
-elseif (I:isOf(item, Items:get("minecraft:spore_blossom"))) then
+elseif I:isOf(item, Items:get("minecraft:spore_blossom")) then
 	-- // Spore Blossom \\ --
 
     M:moveY(matrices, -0.2)
     M:rotateX(matrices, -70)
     M:rotateX(matrices, M:clamp(P:getPitch(player) / 2.5, -20, 90) + ptAngle)
 	M:rotateZ(matrices, ywAngle * 0.5, 0, -0.13, 0)
+elseif I:isOf(item, Items:get("minecraft:sea_pickle")) then
+	M:scale(matrices, 1.2, 1.3, 1.2)
 end

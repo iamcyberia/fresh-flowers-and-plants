@@ -1,7 +1,9 @@
 local bl = data.bl
-local item = data.item
-local player = data.player
 local deltaTime = data.deltaTime
+local hand = data.hand
+local item = data.item
+local particles = context.particles
+local player = data.player
 
 global.freshTime = {R = 0, L = 0};
 global.freshPlantPickleY = 0;
@@ -9,25 +11,34 @@ global.freshPlantSaplingSwayX = 0;
 global.freshPlantSaplingSwayZ = 0;
 global.freshPlantSaplingTopSwayX = 0;
 global.freshPlantSaplingTopSwayY = 0;
+global.temp = false;
 
 local clockSide = bl and "R" or "L"
 freshTime[clockSide] = freshTime[clockSide] + deltaTime * 20
 local time = freshTime[clockSide]
+local choppyTime = P:getAge(player)
 
 
 
 if I:isOf(item, Items:get("minecraft:sea_pickle")) then
     if P:isSubmergedInWater(player) then
-        freshPlantPickleY = freshPlantPickleY + 0.1
+        freshPlantPickleY = freshPlantPickleY + 0.2
+
+        particleManager:addParticle(particles, false,
+            0, 0.14, 0.06,
+            0, 0, 0,
+            0, 0, 0,
+            0, 0, 0,
+            1, Texture:of("minecraft", "textures/particle/pickle_glow.png"),
+            "ITEM", hand, "SPAWN", "ADDITIVE",
+            0, 133 + (15 * math.sin(choppyTime) * 0.2))
     else
         freshPlantPickleY = freshPlantPickleY - 0.1
     end
     freshPlantPickleY = M:clamp(freshPlantPickleY, 0, 1)
 
-    animator:moveY(0, 3, Easings:easeOutBounce(freshPlantPickleY) * 0.19)
+    animator:moveY(0, 3, Easings:easeOutBack(freshPlantPickleY) * 0.19)
 end
-
-
 
 if string.match(I:getName(item), "^minecraft:.*_sapling") or I:isOf(item, Items:get("minecraft:mangrove_propagule")) then
     local strength = 4
