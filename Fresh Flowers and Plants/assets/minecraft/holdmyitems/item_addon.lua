@@ -182,21 +182,21 @@ local vineStuff = {
 
 -- // No common translations or just none at all \\ --
 local otherStuff = {
-	"minecraft:seagrass",
-	"minecraft:kelp",
-	"minecraft:sugar_cane",
-	"minecraft:lily_pad",
-	"minecraft:vine",
-	"minecraft:spore_blossom",
-	"minecraft:sea_pickle",
 	"minecraft:bamboo",
-	"minecraft:glow_lichen",
-	"minecraft:sculk_vein",
-	"minecraft:red_mushroom",
 	"minecraft:brown_mushroom",
 	"minecraft:crimson_fungus",
-	"minecraft:warped_fungus",
+	"minecraft:glow_lichen",
+	"minecraft:kelp",
+	"minecraft:lily_pad",
+	"minecraft:red_mushroom",
+	"minecraft:sculk_vein",
+	"minecraft:sea_pickle",
+	"minecraft:seagrass",
+	"minecraft:spore_blossom",
+	"minecraft:sugar_cane",
 	"minecraft:twisting_vines",
+	"minecraft:vine",
+	"minecraft:warped_fungus",
 }
 
 noBlocksPlease(plantsOnDirt)
