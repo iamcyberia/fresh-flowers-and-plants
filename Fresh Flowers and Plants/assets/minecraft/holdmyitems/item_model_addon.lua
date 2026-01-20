@@ -1,4 +1,3 @@
-local mainHand = data.mainHand
 local bl = data.bl
 local deltaTime = data.deltaTime
 local hand = data.hand
@@ -17,12 +16,15 @@ global.pitchAngleO = 0;
 global.yawAngle = 0;
 global.yawAngleO = 0;
 
+local handMirror = bl and 1 or -1
+local invertedMirror = bl and -1 or 1
+
 local clockSide = bl and "R" or "L"
 freshTime[clockSide] = freshTime[clockSide] + deltaTime * 20
 local time = freshTime[clockSide]
 
-local ptAngle = mainHand and pitchAngle or pitchAngleO
-local ywAngle = mainHand and yawAngle or yawAngleO
+local ptAngle = bl and pitchAngle or pitchAngleO
+local ywAngle = bl and yawAngle or yawAngleO
 
 
 
@@ -47,7 +49,7 @@ if I:isOf(item, Items:get("minecraft:sea_pickle")) then
 elseif string.match(I:getName(item), "^minecraft:.*_sapling") or I:isOf(item, Items:get("minecraft:mangrove_propagule")) then
     local strength = 4
     local speed = 0.083
-    local stiffness = 0.5
+    local stiffness = 0.43
 
     if I:isOf(item, Items:get("minecraft:mangrove_propagule")) or I:isOf(item, Items:get("minecraft:dark_oak_sapling")) then
         strength = 2
@@ -60,9 +62,9 @@ elseif string.match(I:getName(item), "^minecraft:.*_sapling") or I:isOf(item, It
     freshPlantSaplingSwayTopX = math.sin(time * (speed * 1.9) + 2.3) * (strength * 0.25)
     freshPlantSaplingSwayTopZ = math.sin(time * (speed * 2.2) + 0.8) * (strength * 0.35)
 
-    animator:rotateX(0, 7, freshPlantSaplingSwayX + ((ywAngle * -1) * stiffness), 0.5, 0.37, 0.5)
-    animator:rotateZ(0, 7, freshPlantSaplingSwayZ + (ptAngle * stiffness), 0.5, 0.37, 0.5)
+    animator:rotateX(0, 7, freshPlantSaplingSwayX + (ywAngle * invertedMirror) * stiffness, 0.5, 0.37, 0.5)
+    animator:rotateZ(0, 7, freshPlantSaplingSwayZ + (ptAngle * handMirror) * stiffness, 0.5, 0.37, 0.5)
 
-    animator:rotateX(4, 7, freshPlantSaplingSwayTopX + ((ywAngle * -1) * stiffness), 0.5, 0.73, 0.5)
-    animator:rotateZ(4, 7, freshPlantSaplingSwayTopZ + (ptAngle * stiffness), 0.5, 0.73, 0.5)
+    animator:rotateX(4, 7, freshPlantSaplingSwayTopX + (ywAngle * invertedMirror) * stiffness, 0.5, 0.73, 0.5)
+    animator:rotateZ(4, 7, freshPlantSaplingSwayTopZ + (ptAngle * handMirror) * stiffness, 0.5, 0.73, 0.5)
 end
