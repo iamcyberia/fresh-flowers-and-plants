@@ -49,11 +49,11 @@ if I:isOf(item, Items:get("minecraft:sea_pickle")) then
 elseif string.match(I:getName(item), "^minecraft:.*_sapling") or I:isOf(item, Items:get("minecraft:mangrove_propagule")) then
     local strength = 4
     local speed = 0.083
-    local stiffness = 0.43
+    local stiffness = 0.25
 
     if I:isOf(item, Items:get("minecraft:mangrove_propagule")) or I:isOf(item, Items:get("minecraft:dark_oak_sapling")) then
         strength = 2
-        stiffness = 0.25
+        stiffness = 0.1
     end
 
     freshPlantSaplingSwayX = math.sin(time * (speed * 0.7) + 1.7) * (strength * 0.5)
@@ -65,6 +65,6 @@ elseif string.match(I:getName(item), "^minecraft:.*_sapling") or I:isOf(item, It
     animator:rotateX(0, 7, freshPlantSaplingSwayX + (ywAngle * invertedMirror) * stiffness, 0.5, 0.37, 0.5)
     animator:rotateZ(0, 7, freshPlantSaplingSwayZ + (ptAngle * handMirror) * stiffness, 0.5, 0.37, 0.5)
 
-    animator:rotateX(4, 7, freshPlantSaplingSwayTopX + (ywAngle * invertedMirror) * stiffness, 0.5, 0.73, 0.5)
-    animator:rotateZ(4, 7, freshPlantSaplingSwayTopZ + (ptAngle * handMirror) * stiffness, 0.5, 0.73, 0.5)
+    animator:rotateX(4, 7, freshPlantSaplingSwayTopX + ((ywAngle * invertedMirror) * stiffness) * 0.75, 0.5, 0.73, 0.5)
+    animator:rotateZ(4, 7, freshPlantSaplingSwayTopZ + ((ptAngle * handMirror) * stiffness) * 0.75, 0.5, 0.73, 0.5)
 end
