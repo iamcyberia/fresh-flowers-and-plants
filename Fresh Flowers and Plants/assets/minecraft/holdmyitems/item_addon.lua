@@ -49,7 +49,7 @@ local function particleTickerFirefly(particle, id)
 
 	if not state then
 		state = {
-			radius = 0.0015 + math.random() * 0.0025,
+			radius = 0.002 + math.random() * 0.0025,
 			angle = math.random() * 6.283,
 			speed = 0.02 + math.random() * 0.01,
 			axialTwist = 1 + math.random(),
@@ -224,12 +224,9 @@ elseif (checkList(plantsOnDirt)) then
 	M:scale(matrices, 1.1, 1.1, 1.1)
 
 	if I:isOf(item, Items:get("minecraft:firefly_bush")) then
-		local aliveCount = 0
-		for _, state in pairs(fireflyState) do
-			if state then aliveCount = aliveCount + 1 end
-		end
+		maingDisableFireflies = true
 
-		if time >= fireflyDebounce and aliveCount < 10 then
+		if time >= fireflyDebounce and #fireflyState < 10 then
 			fireflyDebounce = time + math.random(40, 60)
 			fireflyID = fireflyID + 1
 
