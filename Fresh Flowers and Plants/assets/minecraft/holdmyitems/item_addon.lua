@@ -237,7 +237,7 @@ elseif (checkList(plantsOnDirt)) then
 				0, 0, 0,
 				0, 0, 0,
 				0.3 + math.random() * 0.1,
-				Texture:of("minecraft", "textures/particle/glowing_firefly.png"), "ITEM", hand, "OPACITY", "ADDITIVE", 30, 255, function(particle) particleTickerFirefly(particle, fireflyID) end)
+				Texture:of("minecraft", "textures/particle/lame_firefly.png"), "ITEM", hand, "OPACITY", "CUTOUT_L", 30, 255, function(particle) particleTickerFirefly(particle, fireflyID) end)
 		end
 	end
 elseif checkList(flowers) then
