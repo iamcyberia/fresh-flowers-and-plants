@@ -16,11 +16,15 @@
           "models": [
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/birch_sapling_top_3d"
+              "model": "minecraft:item/birch_sapling_3d"
             },
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/birch_sapling_bottom_3d"
+              "model": "minecraft:item/birch_forest_grass"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/grass_block_bottom"
             }
           ]
         }

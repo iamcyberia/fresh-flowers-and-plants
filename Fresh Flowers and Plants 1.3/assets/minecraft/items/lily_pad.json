@@ -9,8 +9,7 @@
           "firstperson_lefthand",
           "thirdperson_righthand",
           "thirdperson_lefthand",
-          "head",
-          "ground"
+          "head"
         ],
         "model": {
           "type": "minecraft:model",
@@ -20,7 +19,13 @@
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/lily_pad_2d"
+      "model": "minecraft:item/lily_pad",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -9321636
+        }
+      ]
     }
   }
 }

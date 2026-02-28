@@ -16,11 +16,11 @@
           "models": [
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/crimson_roots_top_3d"
+              "model": "minecraft:item/crimson_roots_3d"
             },
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/crimson_roots_bottom_3d"
+              "model": "minecraft:item/crimson_nylium"
             }
           ]
         }

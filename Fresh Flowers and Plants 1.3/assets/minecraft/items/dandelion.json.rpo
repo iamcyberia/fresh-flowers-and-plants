@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/dandelion/dandelion1.json",
+        "assets/minecraft/items/alt/dandelion/dandelion2.json",
+        "assets/minecraft/items/alt/dandelion/dandelion3.json",
+        "assets/minecraft/items/alt/dandelion/dandelion4.json",
+        "assets/minecraft/items/alt/dandelion/dandelion5.json",
+        "assets/minecraft/items/alt/dandelion/dandelion6.json",
+        "assets/minecraft/items/alt/dandelion/dandelion7.json"
+    ]
+}

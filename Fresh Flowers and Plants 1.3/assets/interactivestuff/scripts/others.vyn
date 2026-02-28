@@ -1,0 +1,57 @@
+importScript("interactivestuff:interactive_resourcepack","physics_lib")
+excludeScript("interactivestuff:interactive_resourcepack","sapling")
+
+
+task onItemUpdate takes itemRendered do
+    check !modLoader.isModLoaded("holdmyitems") do
+        check player.getGamemode() != "spectator" do
+            check isSapling(itemRendered) do
+
+                make saplingTop = new ItemModel(itemRendered.getName())
+
+                make saplingTop2 = new ItemModel(itemRendered.getName())
+   
+                saplingTop2.setParent(saplingTop)
+
+                make saplingTop3 = new ItemModel(itemRendered.getName())
+        
+                saplingTop3.setParent(saplingTop)
+
+                make saplingTop4 = new ItemModel(itemRendered.getName())
+                saplingTop4.setParent(saplingTop)
+
+                make grassBottom = new ItemModel("minecraft:grass_block")
+                grassBottom.setItemModel("interactivestuff:grass_block_bottom")
+                grassBottom.select(0, 4)
+
+                saplingTop.select(5,7)
+                saplingTop2.select(2,3)
+                saplingTop3.select(0,1)
+                saplingTop4.select(4,5)
+
+                runPhysicsEngine(0.01, 0.15, -1.0, 0.3, 0.5, 1.0, 45, 0.1)
+
+                saplingTop.setPivot(0.005, 0.21, 0.12)
+                saplingTop.rotate(angleX, 0, angleZ)
+
+                make motionSq = angleX * angleX + angleZ * angleZ
+                make dynamicScale = 1.0 + motionSq * 0.0005
+
+                check dynamicScale > 1.2 do make dynamicScale = 1.2 end
+
+                make shearXY = angleZ * 0.006 * dynamicScale
+                make shearXZ = (angleX * 0.006 + angleZ * 0.006 * 0.35) * dynamicScale
+                make shearYX = angleX * 0.003 * dynamicScale
+                make shearYZ = angleZ * 0.003 * dynamicScale
+                make shearZX = angleZ * 0.0066 * dynamicScale
+                make shearZY = angleX * 0.0072 * dynamicScale
+
+                saplingTop.shear(shearXY, shearXZ, shearYX, shearYZ, shearZX, shearZY)
+            end
+        end
+    end
+end
+
+task isSapling takes item do
+    reply item.getName() == "minecraft:oak_sapling" || item.getName() == "minecraft:spruce_sapling" || item.getName() == "minecraft:birch_sapling" || item.getName() == "minecraft:jungle_sapling" || item.getName() == "minecraft:acacia_sapling" || item.getName() == "minecraft:dark_oak_sapling" || item.getName() == "minecraft:azalea" || item.getName() == "minecraft:flowering_azalea" || item.getName() == "minecraft:dead_bush" || item.getName() == "minecraft:sea_pickle"
+end

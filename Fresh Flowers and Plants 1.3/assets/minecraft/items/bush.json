@@ -9,18 +9,37 @@
           "firstperson_lefthand",
           "thirdperson_righthand",
           "thirdperson_lefthand",
-          "head",
-          "ground"
+          "head"
         ],
         "model": {
-          "type": "minecraft:model",
-          "model": "minecraft:item/bush_3d"
+          "type": "minecraft:composite",
+          "models": [
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/bush_3d"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/grass_block_top"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/grass_block_bottom"
+            }
+          ]
         }
       }
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/bush_2d"
+      "model": "minecraft:item/bush",
+      "tints": [
+        {
+          "type": "minecraft:grass",
+          "downfall": 1,
+          "temperature": 0.5
+        }
+      ]
     }
   }
 }

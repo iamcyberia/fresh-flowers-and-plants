@@ -16,11 +16,11 @@
           "models": [
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/mangrove_propagule_top_3d"
+              "model": "minecraft:item/mangrove_propagule_3d"
             },
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/mangrove_propagule_bottom_3d"
+              "model": "minecraft:item/mud_block"
             }
           ]
         }

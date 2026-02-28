@@ -16,11 +16,15 @@
           "models": [
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/jungle_sapling_top_3d"
+              "model": "minecraft:item/jungle_sapling_3d"
             },
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/jungle_sapling_bottom_3d"
+              "model": "minecraft:item/jungle_grass"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/grass_block_bottom"
             }
           ]
         }

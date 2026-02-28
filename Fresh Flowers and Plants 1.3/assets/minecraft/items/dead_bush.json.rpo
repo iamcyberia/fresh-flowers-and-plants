@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/dead_bush/dead_bush1.json",
+        "assets/minecraft/items/alt/dead_bush/dead_bush2.json",
+        "assets/minecraft/items/alt/dead_bush/dead_bush3.json",
+        "assets/minecraft/items/alt/dead_bush/dead_bush4.json",
+        "assets/minecraft/items/alt/dead_bush/dead_bush5.json",
+        "assets/minecraft/items/alt/dead_bush/dead_bush6.json",
+        "assets/minecraft/items/alt/dead_bush/dead_bush7.json"
+    ]
+}

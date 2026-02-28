@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/brown_mushroom/brown_mushroom1.json",
+        "assets/minecraft/items/alt/brown_mushroom/brown_mushroom2.json",
+        "assets/minecraft/items/alt/brown_mushroom/brown_mushroom3.json",
+        "assets/minecraft/items/alt/brown_mushroom/brown_mushroom4.json",
+        "assets/minecraft/items/alt/brown_mushroom/brown_mushroom5.json",
+        "assets/minecraft/items/alt/brown_mushroom/brown_mushroom6.json",
+        "assets/minecraft/items/alt/brown_mushroom/brown_mushroom7.json"
+    ]
+}

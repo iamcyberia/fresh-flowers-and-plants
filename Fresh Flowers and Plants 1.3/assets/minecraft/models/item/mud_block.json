@@ -1,0 +1,10 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/grass_block_bottom",
+	"textures": {
+		"1": "item/mangrove_mud_3d",
+		"4": "item/magrove_propagule_roots_3d",
+		"particle": "item/mangrove_propagule"
+	}
+}

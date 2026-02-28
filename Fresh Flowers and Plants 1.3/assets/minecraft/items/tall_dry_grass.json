@@ -16,11 +16,11 @@
           "models": [
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/tall_dry_grass_top_3d"
+              "model": "minecraft:item/tall_dry_grass_3d"
             },
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/tall_dry_grass_bottom_3d"
+              "model": "minecraft:item/sand_block"
             }
           ]
         }

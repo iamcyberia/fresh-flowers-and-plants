@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/azure_bluet/azure_bluet1.json",
+        "assets/minecraft/items/alt/azure_bluet/azure_bluet2.json",
+        "assets/minecraft/items/alt/azure_bluet/azure_bluet3.json",
+        "assets/minecraft/items/alt/azure_bluet/azure_bluet4.json",
+        "assets/minecraft/items/alt/azure_bluet/azure_bluet5.json",
+        "assets/minecraft/items/alt/azure_bluet/azure_bluet6.json",
+        "assets/minecraft/items/alt/azure_bluet/azure_bluet7.json"
+    ]
+}

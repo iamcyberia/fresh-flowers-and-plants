@@ -16,11 +16,15 @@
           "models": [
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/cherry_sapling_top_3d"
+              "model": "minecraft:item/cherry_sapling_3d"
             },
             {
               "type": "minecraft:model",
-              "model": "minecraft:item/cherry_sapling_bottom_3d"
+              "model": "minecraft:item/cherry_grove_grass"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/grass_block_bottom"
             }
           ]
         }

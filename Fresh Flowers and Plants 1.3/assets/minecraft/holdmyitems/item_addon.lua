@@ -243,9 +243,13 @@ elseif (checkList(plantsOnDirt)) then
 elseif checkList(flowers) then
 	-- // Flowers \\ --
 
-	M:moveZ(matrices, 0.025)
+	M:moveX(matrices, -0.025)
+	M:moveY(matrices, 0)
+	M:moveZ(matrices, 0.05)
 
-	M:scale(matrices, 1.1, 1.1, 1.1)
+	M:rotateY(matrices, 67.5)
+
+	M:scale(matrices, 1.25, 1.25, 1.25)
 elseif checkList(corals) then
 	-- // Corals \\ --
 

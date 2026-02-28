@@ -1,0 +1,53 @@
+importScript("interactivestuff:interactive_resourcepack","physics_lib")
+excludeScript("interactivestuff:interactive_resourcepack","sapling")
+
+
+task onItemUpdate takes itemRendered do
+    check !modLoader.isModLoaded("holdmyitems") do
+        check player.getGamemode() != "spectator" do
+            check isFoliage(itemRendered) do
+                make foliageTop = new ItemModel(itemRendered.getName())
+
+                make name = replace(itemRendered.getName(),"minecraft:","interactivestuff:")
+
+                foliageTop.setItemModel(name + "_3d")
+
+                make grassTop = new ItemModel("minecraft:grass_block")
+                grassTop.setItemModel("interactivestuff:grass_block_top")
+
+                make grassBottom = new ItemModel("minecraft:grass_block")
+                grassBottom.setItemModel("interactivestuff:grass_block_bottom")
+
+                foliageTop.setTint(0,player.getWorld().getFoliageColor(player.getSteppingBlock().getPosition()))
+                grassTop.setTint(0,player.getWorld().getGrassColor(player.getSteppingBlock().getPosition()))
+
+                runPhysicsEngine(0.01, 0.15, -1.0, 0.3, 0.5, 1.0, 45, 0.1)
+
+                foliageTop.setPivot(0.005, 0.21, 0.12)
+                foliageTop.rotate(angleX, 0, angleZ)
+
+                make motionSq = angleX * angleX + angleZ * angleZ
+                make dynamicScale = 1.0 + motionSq * 0.0005
+
+                check dynamicScale > 1.2 do make dynamicScale = 1.2 end
+
+                make shearXY = angleZ * 0.006 * dynamicScale
+                make shearXZ = (angleX * 0.006 + angleZ * 0.006 * 0.35) * dynamicScale
+                make shearYX = angleX * 0.003 * dynamicScale
+                make shearYZ = angleZ * 0.003 * dynamicScale
+                make shearZX = angleZ * 0.0066 * dynamicScale
+                make shearZY = angleX * 0.0072 * dynamicScale
+
+                foliageTop.shear(shearXY, shearXZ, shearYX, shearYZ, shearZX, shearZY)
+            end
+            check itemRendered.getName() == "minecraft:vine" do
+                itemRendered.setItemModel("interactivestuff:vine_3d")
+                itemRendered.setTint(0,player.getWorld().getFoliageColor(player.getSteppingBlock().getPosition()))
+            end
+        end
+    end
+end
+
+task isFoliage takes item do
+    reply item.getName() == "minecraft:bush" || item.getName() == "minecraft:fern" || item.getName() == "minecraft:large_fern" || item.getName() == "minecraft:lily_of_the_valley" || item.getName() == "minecraft:short_grass" || item.getName() == "minecraft:tall_grass"
+end
