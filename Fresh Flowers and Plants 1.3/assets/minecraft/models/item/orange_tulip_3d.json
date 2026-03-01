@@ -1,0 +1,20 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/flower_block_template",
+	"textures": {
+		"0": "block/orange_tulip",
+		"particle": "block/orange_tulip"
+	},
+	"gui_light": "front",
+	"display": {
+		"gui": {
+			"rotation": [30, 0, 0],
+			"translation": [0.5, 1, 0],
+			"scale": [1.08398, 1.08398, 1.08398]
+		},
+		"fixed": {
+			"translation": [-0.25, 2, 0.25]
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/allium/allium1.json",
+        "assets/minecraft/items/alt/allium/allium2.json",
+        "assets/minecraft/items/alt/allium/allium3.json",
+        "assets/minecraft/items/alt/allium/allium4.json",
+        "assets/minecraft/items/alt/allium/allium5.json",
+        "assets/minecraft/items/alt/allium/allium6.json",
+        "assets/minecraft/items/alt/allium/allium7.json"
+    ]
+}

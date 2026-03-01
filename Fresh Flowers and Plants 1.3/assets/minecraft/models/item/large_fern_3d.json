@@ -1,0 +1,10 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/grass_block_template2",
+	"textures": {
+		"0": "item/large_fern_top_3d",
+		"1": "item/large_fern_3d",
+		"particle": "item/large_fern_top_3d"
+	}
+}

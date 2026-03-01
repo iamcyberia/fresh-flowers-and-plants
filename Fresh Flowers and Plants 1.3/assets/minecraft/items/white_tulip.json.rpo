@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/white_tulip/white_tulip1.json",
+        "assets/minecraft/items/alt/white_tulip/white_tulip2.json",
+        "assets/minecraft/items/alt/white_tulip/white_tulip3.json",
+        "assets/minecraft/items/alt/white_tulip/white_tulip4.json",
+        "assets/minecraft/items/alt/white_tulip/white_tulip5.json",
+        "assets/minecraft/items/alt/white_tulip/white_tulip6.json",
+        "assets/minecraft/items/alt/white_tulip/white_tulip7.json"
+    ]
+}

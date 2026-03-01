@@ -1,0 +1,34 @@
+make wasUnderwater = false
+make isUnderwater = false
+make seaPickleProgress = 0
+
+task onTick do
+    check player.getWorld() == nothing do
+        reply nothing
+    end
+
+    make isUnderwater = player.isSubmergedInWater()
+
+    make wasUnderwater = isUnderwater
+end
+
+
+task onItemUpdate takes itemRendered do
+    check itemRendered.getName() == "minecraft:sea_pickle" do
+        itemRendered.setItemModel(itemRendered.getName())
+
+        make pickleTop = new ItemModel(itemRendered.getName())
+        pickleTop.select(0,3)
+
+        make currentTarget = 0
+
+
+        check isUnderwater do
+            make currentTarget = 100
+        end
+
+        make seaPickleProgress = pickleTop.smooth(seaPickleProgress, currentTarget, 0.45)
+
+        pickleTop.translate(0, 0.08 * (seaPickleProgress / 100), 0)
+    end
+end

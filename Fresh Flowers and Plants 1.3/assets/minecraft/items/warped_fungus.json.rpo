@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/warped_fungus/warped_fungus1.json",
+        "assets/minecraft/items/alt/warped_fungus/warped_fungus2.json",
+        "assets/minecraft/items/alt/warped_fungus/warped_fungus3.json",
+        "assets/minecraft/items/alt/warped_fungus/warped_fungus4.json",
+        "assets/minecraft/items/alt/warped_fungus/warped_fungus5.json",
+        "assets/minecraft/items/alt/warped_fungus/warped_fungus6.json",
+        "assets/minecraft/items/alt/warped_fungus/warped_fungus7.json"
+    ]
+}

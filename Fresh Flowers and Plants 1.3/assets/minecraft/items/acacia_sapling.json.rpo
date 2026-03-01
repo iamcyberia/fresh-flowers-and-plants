@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/acacia_sapling/acacia_sapling1.json",
+        "assets/minecraft/items/alt/acacia_sapling/acacia_sapling2.json",
+        "assets/minecraft/items/alt/acacia_sapling/acacia_sapling3.json",
+        "assets/minecraft/items/alt/acacia_sapling/acacia_sapling4.json",
+        "assets/minecraft/items/alt/acacia_sapling/acacia_sapling5.json",
+        "assets/minecraft/items/alt/acacia_sapling/acacia_sapling6.json",
+        "assets/minecraft/items/alt/acacia_sapling/acacia_sapling7.json"
+    ]
+}

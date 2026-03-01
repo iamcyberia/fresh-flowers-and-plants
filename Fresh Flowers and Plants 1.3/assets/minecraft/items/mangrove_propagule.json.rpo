@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/mangrove_propagule/mangrove_propagule1.json",
+        "assets/minecraft/items/alt/mangrove_propagule/mangrove_propagule2.json",
+        "assets/minecraft/items/alt/mangrove_propagule/mangrove_propagule3.json",
+        "assets/minecraft/items/alt/mangrove_propagule/mangrove_propagule4.json",
+        "assets/minecraft/items/alt/mangrove_propagule/mangrove_propagule5.json",
+        "assets/minecraft/items/alt/mangrove_propagule/mangrove_propagule6.json",
+        "assets/minecraft/items/alt/mangrove_propagule/mangrove_propagule7.json"
+    ]
+}
