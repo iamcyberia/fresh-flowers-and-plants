@@ -32,7 +32,7 @@
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/firefly_bush"
+      "model": "minecraft:item/short_grass"
     }
   }
 }

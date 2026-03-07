@@ -36,7 +36,7 @@ task onItemUpdate takes itemRendered do
                         make maxAngle = 15
                     end
 
-                    check itemRendered.getName() == "minecraft:dead_bush" || itemRendered.getName() == "minecraft:tall_dry_grass" || itemRendered.getName() == "minecraft:short_dry_grass" do
+                    check itemRendered.getName() == "minecraft:dead_bush" || itemRendered.getName() == "minecraft:tall_dry_grass" do
                         grassTop.setItemModel("interactivestuff:sand_block")
                     end
 
@@ -92,5 +92,5 @@ end
 
 
 task isSpecialSaplingNoneDirt takes item do
-    reply item.getName() == "minecraft:dead_bush" || item.getName() == "minecraft:crimson_roots" || item.getName() == "minecraft:warped_roots" || item.getName() == "minecraft:tall_dry_grass" || item.getName() == "minecraft:short_dry_grass" || item.getName() == "minecraft:nether_sprouts" || item.getName() == "minecraft:mangrove_propagule"
+    reply item.getName() == "minecraft:dead_bush" || item.getName() == "minecraft:crimson_roots" || item.getName() == "minecraft:warped_roots" || item.getName() == "minecraft:tall_dry_grass" || item.getName() == "minecraft:nether_sprouts" || item.getName() == "minecraft:mangrove_propagule"
 end
