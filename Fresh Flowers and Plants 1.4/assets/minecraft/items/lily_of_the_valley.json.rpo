@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/lily_of_the_valley/lily_of_the_valley1.json",
+        "assets/minecraft/items/alt/lily_of_the_valley/lily_of_the_valley2.json",
+        "assets/minecraft/items/alt/lily_of_the_valley/lily_of_the_valley3.json",
+        "assets/minecraft/items/alt/lily_of_the_valley/lily_of_the_valley4.json",
+        "assets/minecraft/items/alt/lily_of_the_valley/lily_of_the_valley5.json",
+        "assets/minecraft/items/alt/lily_of_the_valley/lily_of_the_valley6.json",
+        "assets/minecraft/items/alt/lily_of_the_valley/lily_of_the_valley7.json"
+    ]
+}

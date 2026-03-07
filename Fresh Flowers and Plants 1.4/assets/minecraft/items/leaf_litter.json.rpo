@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/leaf_litter/leaf_litter1.json",
+        "assets/minecraft/items/alt/leaf_litter/leaf_litter2.json",
+        "assets/minecraft/items/alt/leaf_litter/leaf_litter3.json",
+        "assets/minecraft/items/alt/leaf_litter/leaf_litter4.json",
+        "assets/minecraft/items/alt/leaf_litter/leaf_litter5.json",
+        "assets/minecraft/items/alt/leaf_litter/leaf_litter6.json",
+        "assets/minecraft/items/alt/leaf_litter/leaf_litter7.json"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/pale_hanging_moss/pale_hanging_moss1.json",
+        "assets/minecraft/items/alt/pale_hanging_moss/pale_hanging_moss2.json",
+        "assets/minecraft/items/alt/pale_hanging_moss/pale_hanging_moss3.json",
+        "assets/minecraft/items/alt/pale_hanging_moss/pale_hanging_moss4.json",
+        "assets/minecraft/items/alt/pale_hanging_moss/pale_hanging_moss5.json",
+        "assets/minecraft/items/alt/pale_hanging_moss/pale_hanging_moss6.json",
+        "assets/minecraft/items/alt/pale_hanging_moss/pale_hanging_moss7.json"
+    ]
+}

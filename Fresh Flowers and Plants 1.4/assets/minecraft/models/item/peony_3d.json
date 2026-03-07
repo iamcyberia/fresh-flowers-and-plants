@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/flower_block_template2",
+	"textures": {
+		"0": "block/peony_bottom",
+		"1": "block/peony_top",
+		"particle": "block/peony_top"
+	},
+	"gui_light": "front",
+	"display": {
+		"gui": {
+			"rotation": [30, 0, 0],
+			"translation": [0, -3, 0],
+			"scale": [0.55664, 0.55664, 0.55664]
+		}
+	}
+}

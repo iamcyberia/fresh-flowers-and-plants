@@ -1,0 +1,16 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/grass_block_template",
+	"textures": {
+		"0": "item/firefly_bush_2d"
+	},
+	"gui_light": "front",
+	"display": {
+		"gui": {
+			"rotation": [30, 0, 0],
+			"translation": [0, -3.75, 0],
+			"scale": [1.04258, 1.04258, 1.04258]
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"format_version": "1.21.11",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/flower_block_template3",
+	"textures": {
+		"2": "block/wildflowers",
+		"3": "block/wildflowers_stem",
+		"4": "item/basket_3d",
+		"5": "item/pink_petals_3d",
+		"particle": "item/basket_3d"
+	}
+}

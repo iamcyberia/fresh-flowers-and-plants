@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/pitcher_plant/pitcher_plant1.json",
+        "assets/minecraft/items/alt/pitcher_plant/pitcher_plant2.json",
+        "assets/minecraft/items/alt/pitcher_plant/pitcher_plant3.json",
+        "assets/minecraft/items/alt/pitcher_plant/pitcher_plant4.json",
+        "assets/minecraft/items/alt/pitcher_plant/pitcher_plant5.json",
+        "assets/minecraft/items/alt/pitcher_plant/pitcher_plant6.json",
+        "assets/minecraft/items/alt/pitcher_plant/pitcher_plant7.json"
+    ]
+}

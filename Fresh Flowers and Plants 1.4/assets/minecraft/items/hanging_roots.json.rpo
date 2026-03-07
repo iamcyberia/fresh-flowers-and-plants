@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/hanging_roots/hanging_roots1.json",
+        "assets/minecraft/items/alt/hanging_roots/hanging_roots2.json",
+        "assets/minecraft/items/alt/hanging_roots/hanging_roots3.json",
+        "assets/minecraft/items/alt/hanging_roots/hanging_roots4.json",
+        "assets/minecraft/items/alt/hanging_roots/hanging_roots5.json",
+        "assets/minecraft/items/alt/hanging_roots/hanging_roots6.json",
+        "assets/minecraft/items/alt/hanging_roots/hanging_roots7.json"
+    ]
+}

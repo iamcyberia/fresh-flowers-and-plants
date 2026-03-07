@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/flower_block_template2",
+	"textures": {
+		"0": "block/rose_bush_bottom",
+		"1": "block/rose_bush_top",
+		"particle": "block/rose_bush_top"
+	},
+	"gui_light": "front",
+	"display": {
+		"gui": {
+			"rotation": [30, 0, 0],
+			"translation": [0, -2.5, 0],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}

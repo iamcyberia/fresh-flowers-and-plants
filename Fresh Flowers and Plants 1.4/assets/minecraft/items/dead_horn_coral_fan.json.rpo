@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/dead_horn_coral_fan/dead_horn_coral_fan1.json",
+        "assets/minecraft/items/alt/dead_horn_coral_fan/dead_horn_coral_fan2.json",
+        "assets/minecraft/items/alt/dead_horn_coral_fan/dead_horn_coral_fan3.json",
+        "assets/minecraft/items/alt/dead_horn_coral_fan/dead_horn_coral_fan4.json",
+        "assets/minecraft/items/alt/dead_horn_coral_fan/dead_horn_coral_fan5.json",
+        "assets/minecraft/items/alt/dead_horn_coral_fan/dead_horn_coral_fan6.json",
+        "assets/minecraft/items/alt/dead_horn_coral_fan/dead_horn_coral_fan7.json"
+    ]
+}

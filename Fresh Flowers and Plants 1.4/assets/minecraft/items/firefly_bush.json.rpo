@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/firefly_bush/firefly_bush1.json",
+        "assets/minecraft/items/alt/firefly_bush/firefly_bush2.json",
+        "assets/minecraft/items/alt/firefly_bush/firefly_bush3.json",
+        "assets/minecraft/items/alt/firefly_bush/firefly_bush4.json",
+        "assets/minecraft/items/alt/firefly_bush/firefly_bush5.json",
+        "assets/minecraft/items/alt/firefly_bush/firefly_bush6.json",
+        "assets/minecraft/items/alt/firefly_bush/firefly_bush7.json"
+    ]
+}

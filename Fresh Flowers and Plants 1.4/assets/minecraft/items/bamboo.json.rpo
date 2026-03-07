@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/bamboo/bamboo1.json",
+        "assets/minecraft/items/alt/bamboo/bamboo2.json",
+        "assets/minecraft/items/alt/bamboo/bamboo3.json",
+        "assets/minecraft/items/alt/bamboo/bamboo4.json",
+        "assets/minecraft/items/alt/bamboo/bamboo5.json",
+        "assets/minecraft/items/alt/bamboo/bamboo6.json",
+        "assets/minecraft/items/alt/bamboo/bamboo7.json"
+    ]
+}

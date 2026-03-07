@@ -1,0 +1,9 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/coral_block_template",
+	"textures": {
+		"6": "block/brain_coral",
+		"particle": "block/brain_coral"
+	}
+}

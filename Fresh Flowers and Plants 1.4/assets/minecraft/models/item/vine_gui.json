@@ -1,0 +1,17 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/wall_plant_template",
+	"textures": {
+		"0": "item/vine_3d",
+		"particle": "item/vine_3d"
+	},
+	"gui_light": "front",
+	"display": {
+		"gui": {
+			"rotation": [30, -135, 0],
+			"translation": [-4, 2, 0],
+			"scale": [0.75, 0.75, 0.75]
+		}
+	}
+}

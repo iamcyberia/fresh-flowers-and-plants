@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/cactus_flower/cactus_flower1.json",
+        "assets/minecraft/items/alt/cactus_flower/cactus_flower2.json",
+        "assets/minecraft/items/alt/cactus_flower/cactus_flower3.json",
+        "assets/minecraft/items/alt/cactus_flower/cactus_flower4.json",
+        "assets/minecraft/items/alt/cactus_flower/cactus_flower5.json",
+        "assets/minecraft/items/alt/cactus_flower/cactus_flower6.json",
+        "assets/minecraft/items/alt/cactus_flower/cactus_flower7.json"
+    ]
+}

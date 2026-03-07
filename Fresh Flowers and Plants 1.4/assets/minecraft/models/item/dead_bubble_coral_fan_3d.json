@@ -1,0 +1,10 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/coral_block_template4",
+	"textures": {
+		"0": "block/dead_bubble_coral_fan",
+		"1": "block/dead_bubble_coral_block",
+		"particle": "block/dead_bubble_coral_fan"
+	}
+}

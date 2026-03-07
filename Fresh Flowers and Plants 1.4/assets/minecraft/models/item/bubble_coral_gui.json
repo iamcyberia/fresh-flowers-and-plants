@@ -1,0 +1,19 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/grass_block_template",
+	"textures": {
+		"0": "block/bubble_coral"
+	},
+	"gui_light": "front",
+	"display": {
+		"gui": {
+			"rotation": [30, 0, 0],
+			"translation": [0, -2.25, 0],
+			"scale": [1.18516, 1.18516, 1.18516]
+		},
+		"fixed": {
+			"translation": [0, -1.5, 0.5]
+		}
+	}
+}

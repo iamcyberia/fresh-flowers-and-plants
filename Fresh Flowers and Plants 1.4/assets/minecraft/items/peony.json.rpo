@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/peony/peony1.json",
+        "assets/minecraft/items/alt/peony/peony2.json",
+        "assets/minecraft/items/alt/peony/peony3.json",
+        "assets/minecraft/items/alt/peony/peony4.json",
+        "assets/minecraft/items/alt/peony/peony5.json",
+        "assets/minecraft/items/alt/peony/peony6.json",
+        "assets/minecraft/items/alt/peony/peony7.json"
+    ]
+}

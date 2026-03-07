@@ -1,9 +1,0 @@
-{
-	"format_version": "1.21.6",
-	"credit": "cyberia was here",
-	"parent": "minecraft:item/flower_block_template",
-	"textures": {
-		"0": "block/cornflower",
-		"particle": "block/cornflower"
-	}
-}

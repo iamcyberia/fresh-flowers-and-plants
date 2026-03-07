@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/pink_petals/pink_petals1.json",
+        "assets/minecraft/items/alt/pink_petals/pink_petals2.json",
+        "assets/minecraft/items/alt/pink_petals/pink_petals3.json",
+        "assets/minecraft/items/alt/pink_petals/pink_petals4.json",
+        "assets/minecraft/items/alt/pink_petals/pink_petals5.json",
+        "assets/minecraft/items/alt/pink_petals/pink_petals6.json",
+        "assets/minecraft/items/alt/pink_petals/pink_petals7.json"
+    ]
+}

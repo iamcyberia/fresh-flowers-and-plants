@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/vine/vine1.json",
+        "assets/minecraft/items/alt/vine/vine2.json",
+        "assets/minecraft/items/alt/vine/vine3.json",
+        "assets/minecraft/items/alt/vine/vine4.json",
+        "assets/minecraft/items/alt/vine/vine5.json",
+        "assets/minecraft/items/alt/vine/vine6.json",
+        "assets/minecraft/items/alt/vine/vine7.json"
+    ]
+}

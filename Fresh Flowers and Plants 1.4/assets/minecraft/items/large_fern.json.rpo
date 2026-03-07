@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/large_fern/large_fern1.json",
+        "assets/minecraft/items/alt/large_fern/large_fern2.json",
+        "assets/minecraft/items/alt/large_fern/large_fern3.json",
+        "assets/minecraft/items/alt/large_fern/large_fern4.json",
+        "assets/minecraft/items/alt/large_fern/large_fern5.json",
+        "assets/minecraft/items/alt/large_fern/large_fern6.json",
+        "assets/minecraft/items/alt/large_fern/large_fern7.json"
+    ]
+}

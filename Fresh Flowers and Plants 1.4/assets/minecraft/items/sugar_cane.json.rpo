@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/sugar_cane/sugar_cane1.json",
+        "assets/minecraft/items/alt/sugar_cane/sugar_cane2.json",
+        "assets/minecraft/items/alt/sugar_cane/sugar_cane3.json",
+        "assets/minecraft/items/alt/sugar_cane/sugar_cane4.json",
+        "assets/minecraft/items/alt/sugar_cane/sugar_cane5.json",
+        "assets/minecraft/items/alt/sugar_cane/sugar_cane6.json",
+        "assets/minecraft/items/alt/sugar_cane/sugar_cane7.json"
+    ]
+}

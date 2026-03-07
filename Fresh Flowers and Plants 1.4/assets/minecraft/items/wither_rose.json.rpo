@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/wither_rose/wither_rose1.json",
+        "assets/minecraft/items/alt/wither_rose/wither_rose2.json",
+        "assets/minecraft/items/alt/wither_rose/wither_rose3.json",
+        "assets/minecraft/items/alt/wither_rose/wither_rose4.json",
+        "assets/minecraft/items/alt/wither_rose/wither_rose5.json",
+        "assets/minecraft/items/alt/wither_rose/wither_rose6.json",
+        "assets/minecraft/items/alt/wither_rose/wither_rose7.json"
+    ]
+}

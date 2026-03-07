@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/wildflowers/wildflowers1.json",
+        "assets/minecraft/items/alt/wildflowers/wildflowers2.json",
+        "assets/minecraft/items/alt/wildflowers/wildflowers3.json",
+        "assets/minecraft/items/alt/wildflowers/wildflowers4.json",
+        "assets/minecraft/items/alt/wildflowers/wildflowers5.json",
+        "assets/minecraft/items/alt/wildflowers/wildflowers6.json",
+        "assets/minecraft/items/alt/wildflowers/wildflowers7.json"
+    ]
+}

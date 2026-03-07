@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/dead_brain_coral/dead_brain_coral1.json",
+        "assets/minecraft/items/alt/dead_brain_coral/dead_brain_coral2.json",
+        "assets/minecraft/items/alt/dead_brain_coral/dead_brain_coral3.json",
+        "assets/minecraft/items/alt/dead_brain_coral/dead_brain_coral4.json",
+        "assets/minecraft/items/alt/dead_brain_coral/dead_brain_coral5.json",
+        "assets/minecraft/items/alt/dead_brain_coral/dead_brain_coral6.json",
+        "assets/minecraft/items/alt/dead_brain_coral/dead_brain_coral7.json"
+    ]
+}

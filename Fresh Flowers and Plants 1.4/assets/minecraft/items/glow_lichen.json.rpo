@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/glow_lichen/glow_lichen1.json",
+        "assets/minecraft/items/alt/glow_lichen/glow_lichen2.json",
+        "assets/minecraft/items/alt/glow_lichen/glow_lichen3.json",
+        "assets/minecraft/items/alt/glow_lichen/glow_lichen4.json",
+        "assets/minecraft/items/alt/glow_lichen/glow_lichen5.json",
+        "assets/minecraft/items/alt/glow_lichen/glow_lichen6.json",
+        "assets/minecraft/items/alt/glow_lichen/glow_lichen7.json"
+    ]
+}
