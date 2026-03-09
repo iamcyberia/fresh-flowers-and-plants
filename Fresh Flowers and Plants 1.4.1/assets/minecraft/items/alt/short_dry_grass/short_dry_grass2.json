@@ -10,14 +10,14 @@
           "thirdperson_righthand",
           "thirdperson_lefthand",
           "head",
-          "ground"
+          "fixed"
         ],
         "model": {
           "type": "minecraft:composite",
           "models": [
             {
               "type": "minecraft:model",
-"model": "minecraft:item/short_dry_grass_3d"
+              "model": "minecraft:item/short_dry_grass_3d"
             },
             {
               "type": "minecraft:model",

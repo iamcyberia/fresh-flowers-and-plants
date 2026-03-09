@@ -9,21 +9,29 @@
           "firstperson_lefthand",
           "thirdperson_righthand",
           "thirdperson_lefthand",
-          "head",
-          "fixed"
+          "head"
         ],
         "model": {
           "type": "minecraft:composite",
           "models": [
             {
               "type": "minecraft:model",
-"model": "minecraft:item/short_dry_grass_3d"
+              "model": "minecraft:item/short_dry_grass_3d"
             },
             {
               "type": "minecraft:model",
               "model": "minecraft:item/sand_block"
             }
           ]
+        }
+      },
+      {
+        "when": [
+          "gui"
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/short_dry_grass_3d"
         }
       }
     ],
