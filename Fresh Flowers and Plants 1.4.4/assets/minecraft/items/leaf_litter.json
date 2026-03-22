@@ -13,13 +13,13 @@
         ],
         "model": {
           "type": "minecraft:model",
-          "model": "minecraft:item/pink_petals_3d"
+          "model": "minecraft:item/leaf_litter_3d"
         }
       }
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/pink_petals"
+      "model": "minecraft:item/leaf_litter"
     }
   }
 }

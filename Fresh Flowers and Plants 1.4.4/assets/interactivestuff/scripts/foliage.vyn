@@ -23,7 +23,12 @@ task onItemUpdate takes itemRendered do
                 check !modLoader.isModLoaded("holdmyitems") do
                     runPhysicsEngine(0.01, 0.15, 1.0, 0.3, 0.5, 1.0, 45, 0.1)
 
-                    foliageTop.setPivot(0.005, 0.21, 0.12)
+                    check !modLoader.isModLoaded("punchy") do
+                        foliageTop.setPivot(0.005, 0.21, 0.12)
+                    otherwise
+                        foliageTop.setPivot(-0.02, 0.05, 0)
+                    end
+                    
                     foliageTop.rotate(angleX, 0, angleZ)
 
                     make motionSq = angleX * angleX + angleZ * angleZ

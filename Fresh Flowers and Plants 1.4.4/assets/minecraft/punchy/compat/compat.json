@@ -1,0 +1,526 @@
+{
+  "itemSpecific": {
+    "minecraft:pink_petals": {
+      "kind": "BLOCK",
+      "armKind": "BLOCK",
+      "keep_trigger_arm_tuning": true,
+      "disable_sprint_lateral_tilt": true,
+      "physics": [
+        {
+          "name": "FORWARD_PENDULUM",
+          "limitDegUp": 90.0,
+          "limitDegDown": 10.0,
+          "force": 0.1,
+          "speed": 1.0,
+          "cameraSens": 0.25,
+          "gravity": 25.0,
+          "handSpace": true
+        }
+      ],
+      "customAnimation": [
+        {
+          "type": "useItem",
+          "name": "fresh_flowers_animation"
+        }
+      ],
+      "particles": [
+        {
+          "type": "minecraft:tinted_leaves",
+          "target": "all_faces",
+          "texture": "minecraft:punchy/textures/particle/pink_petal",
+          "rate": 6,
+          "count": 5,
+          "spread": [
+            0.20,
+            0.01,
+            0.20
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "life": 2,
+          "size": 0.05,
+          "size_end": 0.05,
+          "alpha": 1,
+          "alpha_end": 1,
+          "gravity": -0.06,
+          "full_day_light": true,
+          "fullbright": false,
+          "triggers":[
+            "sprinting",
+            "mining",
+            "attacking"
+          ]
+        },
+        {
+          "type": "minecraft:tinted_leaves",
+          "target": "all_faces",
+          "texture": "minecraft:punchy/textures/particle/pink_petal",
+          "rate": 6,
+          "count": 8,
+          "spread": [
+            0.20,
+            0.01,
+            0.20
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "life": 2,
+          "size": 0.05,
+          "size_end": 0.05,
+          "alpha": 1,
+          "alpha_end": 1,
+          "gravity": -0.06,
+          "offset": [
+            -0.3,
+            0.2,
+            0
+          ],
+          "triggers":[
+            "use_item"
+          ],
+          "full_day_light": true,
+          "fullbright": false
+        },
+        {
+          "type": "minecraft:tinted_leaves",
+          "target": "all_faces",
+          "texture": "minecraft:punchy/textures/particle/pink_petal",
+          "rate": 6,
+          "count": 5,
+          "spread": [
+            0.20,
+            0.01,
+            0.20
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "life": 5,
+          "size": 0.05,
+          "size_end": 0.05,
+          "alpha": 1,
+          "alpha_end": 0,
+          "drag": 0.985,
+          "gravity": -0.06,
+          "full_day_light": true,
+          "fullbright": false,
+          "triggers": {
+            "falling": {
+              "min_blocks": 0
+            }
+          }
+        }
+      ],
+      "transforms": {
+        "right": {
+          "scale": 1.0,
+          "offX": 0.01,
+          "offY": -0.3899999,
+          "offZ": 0.11999998,
+          "rotX": -39.0,
+          "rotY": 11.0,
+          "rotZ": -80.0,
+          "pivotX": -0.049999997,
+          "pivotY": -1.4901161E-8,
+          "pivotZ": -0.019999985,
+          "physics": "FORWARD_PENDULUM"
+        },
+        "left": {
+          "scale": 1.0,
+          "offX": -0.01,
+          "offY": -0.3899999,
+          "offZ": 0.11999998,
+          "rotX": -39.0,
+          "rotY": -11.0,
+          "rotZ": 80.0,
+          "pivotX": 0.049999997,
+          "pivotY": -1.4901161E-8,
+          "pivotZ": -0.019999985,
+          "physics": "FORWARD_PENDULUM"
+        }
+      },
+      "armTransforms": {
+        "right": {
+          "scale": 1.0,
+          "offX": -0.03999996,
+          "offY": -0.19844353,
+          "offZ": 0.049999952,
+          "rotX": -10.0,
+          "rotY": -100.0,
+          "rotZ": -7.0,
+          "pivotX": 0.0,
+          "pivotY": 0.0,
+          "pivotZ": 0.0
+        },
+        "left": {
+          "scale": 1.0,
+          "offX": 0.03999996,
+          "offY": -0.19844353,
+          "offZ": 0.049999952,
+          "rotX": -10.0,
+          "rotY": 100.0,
+          "rotZ": 7.0,
+          "pivotX": 0.0,
+          "pivotY": 0.0,
+          "pivotZ": 0.0
+        }
+      }
+    },
+    "minecraft:leaf_litter": {
+      "kind": "BLOCK",
+      "armKind": "BLOCK",
+      "keep_trigger_arm_tuning": true,
+      "disable_sprint_lateral_tilt": true,
+      "customAnimation": [
+        {
+          "type": "useItem",
+          "name": "fresh_flowers_animation"
+        }
+      ],
+      "physics": [
+        {
+          "name": "FORWARD_PENDULUM",
+          "limitDegUp": 90.0,
+          "limitDegDown": 10.0,
+          "force": 0.1,
+          "speed": 1.0,
+          "cameraSens": 0.25,
+          "gravity": 25.0,
+          "handSpace": true
+        }
+      ],
+      "particles": [
+        {
+          "type": "minecraft:tinted_leaves",
+          "target": "all_faces",
+          "rate": 6,
+          "count": 5,
+          "spread": [
+            0.20,
+            0.01,
+            0.20
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "life": 2,
+          "size": 0.05,
+          "size_end": 0.05,
+          "alpha": 1,
+          "alpha_end": 1,
+          "gravity": -0.06,
+          "tint": [0.64, 0.50, 0.34],
+          "full_day_light": true,
+          "fullbright": false,
+          "triggers":[
+            "sprinting",
+            "mining",
+            "attacking"
+          ]
+        },
+        {
+          "type": "minecraft:tinted_leaves",
+          "target": "all_faces",
+          "rate": 6,
+          "count": 8,
+          "spread": [
+            0.20,
+            0.01,
+            0.20
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "life": 2,
+          "size": 0.05,
+          "size_end": 0.05,
+          "alpha": 1,
+          "alpha_end": 1,
+          "gravity": -0.06,
+          "offset": [
+            -0.3,
+            0.2,
+            0
+          ],
+          "tint": [0.64, 0.50, 0.34],
+          "triggers":[
+            "use_item"
+          ],
+          "full_day_light": true,
+          "fullbright": false
+        },
+        {
+          "type": "minecraft:tinted_leaves",
+          "target": "all_faces",
+          "rate": 6,
+          "count": 5,
+          "spread": [
+            0.20,
+            0.01,
+            0.20
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "life": 5,
+          "size": 0.05,
+          "size_end": 0.05,
+          "alpha": 1,
+          "alpha_end": 0,
+          "drag": 0.985,
+          "gravity": -0.06,
+          "tint": [0.64, 0.50, 0.34],
+          "full_day_light": true,
+          "fullbright": false,
+          "triggers": {
+            "falling": {
+              "min_blocks": 0
+            }
+          }
+        }
+      ],
+      "transforms": {
+        "right": {
+          "scale": 1.0,
+          "offX": 0.01,
+          "offY": -0.3899999,
+          "offZ": 0.11999998,
+          "rotX": -39.0,
+          "rotY": 11.0,
+          "rotZ": -80.0,
+          "pivotX": -0.049999997,
+          "pivotY": -1.4901161E-8,
+          "pivotZ": -0.019999985,
+          "physics": "FORWARD_PENDULUM"
+        },
+        "left": {
+          "scale": 1.0,
+          "offX": -0.01,
+          "offY": -0.3899999,
+          "offZ": 0.11999998,
+          "rotX": -39.0,
+          "rotY": -11.0,
+          "rotZ": 80.0,
+          "pivotX": 0.049999997,
+          "pivotY": -1.4901161E-8,
+          "pivotZ": -0.019999985,
+          "physics": "FORWARD_PENDULUM"
+        }
+      },
+      "armTransforms": {
+        "right": {
+          "scale": 1.0,
+          "offX": -0.03999996,
+          "offY": -0.19844353,
+          "offZ": 0.049999952,
+          "rotX": -10.0,
+          "rotY": -100.0,
+          "rotZ": -7.0,
+          "pivotX": 0.0,
+          "pivotY": 0.0,
+          "pivotZ": 0.0
+        },
+        "left": {
+          "scale": 1.0,
+          "offX": 0.03999996,
+          "offY": -0.19844353,
+          "offZ": 0.049999952,
+          "rotX": -10.0,
+          "rotY": 100.0,
+          "rotZ": 7.0,
+          "pivotX": 0.0,
+          "pivotY": 0.0,
+          "pivotZ": 0.0
+        }
+      }
+    },
+    "minecraft:wildflowers": {
+      "kind": "BLOCK",
+      "armKind": "BLOCK",
+      "keep_trigger_arm_tuning": true,
+      "disable_sprint_lateral_tilt": true,
+      "physics": [
+        {
+          "name": "FORWARD_PENDULUM",
+          "limitDegUp": 90.0,
+          "limitDegDown": 10.0,
+          "force": 0.1,
+          "speed": 1.0,
+          "cameraSens": 0.25,
+          "gravity": 25.0,
+          "handSpace": true
+        }
+      ],
+      "customAnimation": [
+        {
+          "type": "useItem",
+          "name": "fresh_flowers_animation"
+        }
+      ],
+      "particles": [
+        {
+          "type": "minecraft:tinted_leaves",
+          "target": "all_faces",
+          "texture": "minecraft:punchy/textures/particle/wildflower",
+          "rate": 6,
+          "count": 5,
+          "spread": [
+            0.20,
+            0.01,
+            0.20
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "life": 2,
+          "size": 0.05,
+          "size_end": 0.05,
+          "alpha": 1,
+          "alpha_end": 1,
+          "gravity": -0.06,
+          "full_day_light": true,
+          "fullbright": false,
+          "triggers":[
+            "sprinting",
+            "mining",
+            "attacking"
+          ]
+        },
+        {
+          "type": "minecraft:tinted_leaves",
+          "target": "all_faces",
+          "texture": "minecraft:punchy/textures/particle/wildflower",
+          "rate": 6,
+          "count": 8,
+          "spread": [
+            0.20,
+            0.01,
+            0.20
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "life": 2,
+          "size": 0.05,
+          "size_end": 0.05,
+          "alpha": 1,
+          "alpha_end": 1,
+          "gravity": -0.06,
+          "offset": [
+            -0.3,
+            0.2,
+            0
+          ],
+          "triggers":[
+            "use_item"
+          ],
+          "full_day_light": true,
+          "fullbright": false
+        },
+        {
+          "type": "minecraft:tinted_leaves",
+          "target": "all_faces",
+          "texture": "minecraft:punchy/textures/particle/wildflower",
+          "rate": 6,
+          "count": 5,
+          "spread": [
+            0.20,
+            0.01,
+            0.20
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "life": 5,
+          "size": 0.05,
+          "size_end": 0.05,
+          "alpha": 1,
+          "alpha_end": 0,
+          "drag": 0.985,
+          "gravity": -0.06,
+          "full_day_light": true,
+          "fullbright": false,
+          "triggers": {
+            "falling": {
+              "min_blocks": 0
+            }
+          }
+        }
+      ],
+      "transforms": {
+        "right": {
+          "scale": 1.0,
+          "offX": 0.01,
+          "offY": -0.3899999,
+          "offZ": 0.11999998,
+          "rotX": -39.0,
+          "rotY": 11.0,
+          "rotZ": -80.0,
+          "pivotX": -0.049999997,
+          "pivotY": -1.4901161E-8,
+          "pivotZ": -0.019999985,
+          "physics": "FORWARD_PENDULUM"
+        },
+        "left": {
+          "scale": 1.0,
+          "offX": -0.01,
+          "offY": -0.3899999,
+          "offZ": 0.11999998,
+          "rotX": -39.0,
+          "rotY": -11.0,
+          "rotZ": 80.0,
+          "pivotX": 0.049999997,
+          "pivotY": -1.4901161E-8,
+          "pivotZ": -0.019999985,
+          "physics": "FORWARD_PENDULUM"
+        }
+      },
+      "armTransforms": {
+        "right": {
+          "scale": 1.0,
+          "offX": -0.03999996,
+          "offY": -0.19844353,
+          "offZ": 0.049999952,
+          "rotX": -10.0,
+          "rotY": -100.0,
+          "rotZ": -7.0,
+          "pivotX": 0.0,
+          "pivotY": 0.0,
+          "pivotZ": 0.0
+        },
+        "left": {
+          "scale": 1.0,
+          "offX": 0.03999996,
+          "offY": -0.19844353,
+          "offZ": 0.049999952,
+          "rotX": -10.0,
+          "rotY": 100.0,
+          "rotZ": 7.0,
+          "pivotX": 0.0,
+          "pivotY": 0.0,
+          "pivotZ": 0.0
+        }
+      }
+    }
+  }
+}
