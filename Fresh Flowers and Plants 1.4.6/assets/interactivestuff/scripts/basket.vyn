@@ -1,7 +1,11 @@
-importScript("interactivestuff:interactive_resourcepack","physics_lib")
+make isResourcePackLoaded = modLoader.isResourcePackLoaded("interactivestuff:interactive_resourcepack")
+
+check isResourcePackLoaded do
+    importScript("interactivestuff:interactive_resourcepack","physics_lib")
+end
 
 task onItemUpdate takes itemRendered do
-    check !modLoader.isModLoaded("holdmyitems") do
+    check !modLoader.isModLoaded("holdmyitems") && isResourcePackLoaded do
         check player.getGamemode() != "spectator" && isItemBasket(itemRendered) do
             runPhysicsEngine(0.01, 0.1, 3.0, 0.36, 0.45, 0.8, 60, 0)
 

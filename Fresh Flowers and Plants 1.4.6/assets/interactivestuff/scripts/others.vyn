@@ -1,5 +1,10 @@
-importScript("interactivestuff:interactive_resourcepack","physics_lib")
-excludeScript("interactivestuff:interactive_resourcepack","sapling")
+make isResourcePackLoaded = modLoader.isResourcePackLoaded("interactivestuff:interactive_resourcepack")
+
+check isResourcePackLoaded do
+    importScript("interactivestuff:interactive_resourcepack","physics_lib")
+    excludeScript("interactivestuff:interactive_resourcepack","sapling")
+end
+
 
 
 task onItemUpdate takes itemRendered do
@@ -58,7 +63,7 @@ task onItemUpdate takes itemRendered do
                     grassBottom.setItemModel("interactivestuff:grass_block_bottom")
                 end
 
-                check !modLoader.isModLoaded("holdmyitems") do
+                check !modLoader.isModLoaded("holdmyitems") && isResourcePackLoaded do
 
                     runPhysicsEngine(stiffness, 0.15, -1.0, 0.3, 0.5, 1.0, 45, 0.1)
 

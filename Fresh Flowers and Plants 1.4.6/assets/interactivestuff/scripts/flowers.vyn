@@ -1,7 +1,11 @@
-importScript("interactivestuff:interactive_resourcepack","physics_lib")
+make isResourcePackLoaded = modLoader.isResourcePackLoaded("interactivestuff:interactive_resourcepack")
+
+check isResourcePackLoaded do
+    importScript("interactivestuff:interactive_resourcepack","physics_lib")
+end
 
 task onItemUpdate takes itemRendered do
-    check !modLoader.isModLoaded("holdmyitems") do
+    check !modLoader.isModLoaded("holdmyitems") && isResourcePackLoaded do
         check player.getGamemode() != "spectator" do
             check isFlower(itemRendered) do
 
