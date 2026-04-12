@@ -2,9 +2,9 @@
   "pack": {
     "description": "§7By Cyber, Maingvaldsen & Omar",
     "pack_format": 46, 
-    "supported_formats": [46, 75], 
+    "supported_formats": [46, 84], 
     "min_format": 46, 
-    "max_format": 75
+    "max_format": 84
   },
   "overlays": {
     "entries": [
@@ -34,6 +34,15 @@
         },
         "min_format": 65, 
         "max_format": 75
+      },
+      { 
+        "directory": "26.1",
+        "formats": { 
+          "min_inclusive": 76,
+          "max_inclusive": 84
+        },
+        "min_format": 76, 
+        "max_format": 84
       }
     ]
   }
