@@ -1,0 +1,4 @@
+{
+	condition: "FreshFlowersAndPlants.GlowyFireflies",
+	fallback: "assets/minecraft/textures/particle/lame_firefly.png"
+}

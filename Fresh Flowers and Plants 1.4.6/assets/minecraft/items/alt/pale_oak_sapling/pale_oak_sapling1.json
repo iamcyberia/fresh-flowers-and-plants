@@ -1,0 +1,39 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:display_context",
+    "cases": [
+      {
+        "when": [
+          "firstperson_righthand",
+          "firstperson_lefthand",
+          "thirdperson_righthand",
+          "thirdperson_lefthand",
+          "head",
+          "ground"
+        ],
+        "model": {
+          "type": "minecraft:composite",
+          "models": [
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/pale_oak_sapling_3d"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/pale_garden_grass"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/grass_block_bottom"
+            }
+          ]
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/pale_oak_sapling"
+    }
+  }
+}

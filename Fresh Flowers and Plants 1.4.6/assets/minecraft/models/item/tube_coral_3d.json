@@ -1,0 +1,9 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/coral_block_template",
+	"textures": {
+		"6": "block/tube_coral",
+		"particle": "block/tube_coral"
+	}
+}

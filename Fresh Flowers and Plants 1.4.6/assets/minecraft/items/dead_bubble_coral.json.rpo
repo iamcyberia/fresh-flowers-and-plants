@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/dead_bubble_coral/dead_bubble_coral1.json",
+        "assets/minecraft/items/alt/dead_bubble_coral/dead_bubble_coral2.json",
+        "assets/minecraft/items/alt/dead_bubble_coral/dead_bubble_coral3.json",
+        "assets/minecraft/items/alt/dead_bubble_coral/dead_bubble_coral4.json",
+        "assets/minecraft/items/alt/dead_bubble_coral/dead_bubble_coral5.json",
+        "assets/minecraft/items/alt/dead_bubble_coral/dead_bubble_coral6.json",
+        "assets/minecraft/items/alt/dead_bubble_coral/dead_bubble_coral7.json"
+    ]
+}

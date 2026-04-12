@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/sunflower/sunflower1.json",
+        "assets/minecraft/items/alt/sunflower/sunflower2.json",
+        "assets/minecraft/items/alt/sunflower/sunflower3.json",
+        "assets/minecraft/items/alt/sunflower/sunflower4.json",
+        "assets/minecraft/items/alt/sunflower/sunflower5.json",
+        "assets/minecraft/items/alt/sunflower/sunflower6.json",
+        "assets/minecraft/items/alt/sunflower/sunflower7.json"
+    ]
+}

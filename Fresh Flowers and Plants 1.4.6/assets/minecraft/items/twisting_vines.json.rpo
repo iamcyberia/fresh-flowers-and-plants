@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/twisting_vines/twisting_vines1.json",
+        "assets/minecraft/items/alt/twisting_vines/twisting_vines2.json",
+        "assets/minecraft/items/alt/twisting_vines/twisting_vines3.json",
+        "assets/minecraft/items/alt/twisting_vines/twisting_vines4.json",
+        "assets/minecraft/items/alt/twisting_vines/twisting_vines5.json",
+        "assets/minecraft/items/alt/twisting_vines/twisting_vines6.json",
+        "assets/minecraft/items/alt/twisting_vines/twisting_vines7.json"
+    ]
+}

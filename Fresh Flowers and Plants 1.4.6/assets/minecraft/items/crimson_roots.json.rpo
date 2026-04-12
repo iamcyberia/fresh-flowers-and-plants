@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/crimson_roots/crimson_roots1.json",
+        "assets/minecraft/items/alt/crimson_roots/crimson_roots2.json",
+        "assets/minecraft/items/alt/crimson_roots/crimson_roots3.json",
+        "assets/minecraft/items/alt/crimson_roots/crimson_roots4.json",
+        "assets/minecraft/items/alt/crimson_roots/crimson_roots5.json",
+        "assets/minecraft/items/alt/crimson_roots/crimson_roots6.json",
+        "assets/minecraft/items/alt/crimson_roots/crimson_roots7.json"
+    ]
+}

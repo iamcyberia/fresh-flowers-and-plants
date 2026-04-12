@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/nether_sprouts/nether_sprouts1.json",
+        "assets/minecraft/items/alt/nether_sprouts/nether_sprouts2.json",
+        "assets/minecraft/items/alt/nether_sprouts/nether_sprouts3.json",
+        "assets/minecraft/items/alt/nether_sprouts/nether_sprouts4.json",
+        "assets/minecraft/items/alt/nether_sprouts/nether_sprouts5.json",
+        "assets/minecraft/items/alt/nether_sprouts/nether_sprouts6.json",
+        "assets/minecraft/items/alt/nether_sprouts/nether_sprouts7.json"
+    ]
+}

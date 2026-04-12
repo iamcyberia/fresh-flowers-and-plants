@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/blue_orchid/blue_orchid1.json",
+        "assets/minecraft/items/alt/blue_orchid/blue_orchid2.json",
+        "assets/minecraft/items/alt/blue_orchid/blue_orchid3.json",
+        "assets/minecraft/items/alt/blue_orchid/blue_orchid4.json",
+        "assets/minecraft/items/alt/blue_orchid/blue_orchid5.json",
+        "assets/minecraft/items/alt/blue_orchid/blue_orchid6.json",
+        "assets/minecraft/items/alt/blue_orchid/blue_orchid7.json"
+    ]
+}

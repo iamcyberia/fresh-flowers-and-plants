@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/warped_roots/warped_roots1.json",
+        "assets/minecraft/items/alt/warped_roots/warped_roots2.json",
+        "assets/minecraft/items/alt/warped_roots/warped_roots3.json",
+        "assets/minecraft/items/alt/warped_roots/warped_roots4.json",
+        "assets/minecraft/items/alt/warped_roots/warped_roots5.json",
+        "assets/minecraft/items/alt/warped_roots/warped_roots6.json",
+        "assets/minecraft/items/alt/warped_roots/warped_roots7.json"
+    ]
+}

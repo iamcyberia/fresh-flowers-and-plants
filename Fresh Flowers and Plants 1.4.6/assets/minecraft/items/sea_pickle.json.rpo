@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/sea_pickle/sea_pickle1.json",
+        "assets/minecraft/items/alt/sea_pickle/sea_pickle2.json",
+        "assets/minecraft/items/alt/sea_pickle/sea_pickle3.json",
+        "assets/minecraft/items/alt/sea_pickle/sea_pickle4.json",
+        "assets/minecraft/items/alt/sea_pickle/sea_pickle5.json",
+        "assets/minecraft/items/alt/sea_pickle/sea_pickle6.json",
+        "assets/minecraft/items/alt/sea_pickle/sea_pickle7.json"
+    ]
+}

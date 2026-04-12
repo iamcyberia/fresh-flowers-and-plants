@@ -1,0 +1,9 @@
+{
+	"format_version": "1.21.6",
+	"credit": "cyberia was here",
+	"parent": "minecraft:item/grass_block_bottom",
+	"textures": {
+		"1": "item/crimson_nylium_3d",
+		"4": "item/crimson_sapling_roots_3d"
+	}
+}

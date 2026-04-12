@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/spruce_sapling/spruce_sapling1.json",
+        "assets/minecraft/items/alt/spruce_sapling/spruce_sapling2.json",
+        "assets/minecraft/items/alt/spruce_sapling/spruce_sapling3.json",
+        "assets/minecraft/items/alt/spruce_sapling/spruce_sapling4.json",
+        "assets/minecraft/items/alt/spruce_sapling/spruce_sapling5.json",
+        "assets/minecraft/items/alt/spruce_sapling/spruce_sapling6.json",
+        "assets/minecraft/items/alt/spruce_sapling/spruce_sapling7.json"
+    ]
+}

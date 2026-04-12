@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/spore_blossom/spore_blossom1.json",
+        "assets/minecraft/items/alt/spore_blossom/spore_blossom2.json",
+        "assets/minecraft/items/alt/spore_blossom/spore_blossom3.json",
+        "assets/minecraft/items/alt/spore_blossom/spore_blossom4.json",
+        "assets/minecraft/items/alt/spore_blossom/spore_blossom5.json",
+        "assets/minecraft/items/alt/spore_blossom/spore_blossom6.json",
+        "assets/minecraft/items/alt/spore_blossom/spore_blossom7.json"
+    ]
+}

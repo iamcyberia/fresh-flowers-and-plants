@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/fern/fern1.json",
+        "assets/minecraft/items/alt/fern/fern2.json",
+        "assets/minecraft/items/alt/fern/fern3.json",
+        "assets/minecraft/items/alt/fern/fern4.json",
+        "assets/minecraft/items/alt/fern/fern5.json",
+        "assets/minecraft/items/alt/fern/fern6.json",
+        "assets/minecraft/items/alt/fern/fern7.json"
+    ]
+}

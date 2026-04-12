@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/fire_coral/fire_coral1.json",
+        "assets/minecraft/items/alt/fire_coral/fire_coral2.json",
+        "assets/minecraft/items/alt/fire_coral/fire_coral3.json",
+        "assets/minecraft/items/alt/fire_coral/fire_coral4.json",
+        "assets/minecraft/items/alt/fire_coral/fire_coral5.json",
+        "assets/minecraft/items/alt/fire_coral/fire_coral6.json",
+        "assets/minecraft/items/alt/fire_coral/fire_coral7.json"
+    ]
+}

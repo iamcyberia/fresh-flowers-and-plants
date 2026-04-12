@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/open_eyeblossom/open_eyeblossom1.json",
+        "assets/minecraft/items/alt/open_eyeblossom/open_eyeblossom2.json",
+        "assets/minecraft/items/alt/open_eyeblossom/open_eyeblossom3.json",
+        "assets/minecraft/items/alt/open_eyeblossom/open_eyeblossom4.json",
+        "assets/minecraft/items/alt/open_eyeblossom/open_eyeblossom5.json",
+        "assets/minecraft/items/alt/open_eyeblossom/open_eyeblossom6.json",
+        "assets/minecraft/items/alt/open_eyeblossom/open_eyeblossom7.json"
+    ]
+}

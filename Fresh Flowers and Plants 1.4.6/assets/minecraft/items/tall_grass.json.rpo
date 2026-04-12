@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/tall_grass/tall_grass1.json",
+        "assets/minecraft/items/alt/tall_grass/tall_grass2.json",
+        "assets/minecraft/items/alt/tall_grass/tall_grass3.json",
+        "assets/minecraft/items/alt/tall_grass/tall_grass4.json",
+        "assets/minecraft/items/alt/tall_grass/tall_grass5.json",
+        "assets/minecraft/items/alt/tall_grass/tall_grass6.json",
+        "assets/minecraft/items/alt/tall_grass/tall_grass7.json"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/weeping_vines/weeping_vines1.json",
+        "assets/minecraft/items/alt/weeping_vines/weeping_vines2.json",
+        "assets/minecraft/items/alt/weeping_vines/weeping_vines3.json",
+        "assets/minecraft/items/alt/weeping_vines/weeping_vines4.json",
+        "assets/minecraft/items/alt/weeping_vines/weeping_vines5.json",
+        "assets/minecraft/items/alt/weeping_vines/weeping_vines6.json",
+        "assets/minecraft/items/alt/weeping_vines/weeping_vines7.json"
+    ]
+}

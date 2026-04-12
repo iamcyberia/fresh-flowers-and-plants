@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/sculk_vein/sculk_vein1.json",
+        "assets/minecraft/items/alt/sculk_vein/sculk_vein2.json",
+        "assets/minecraft/items/alt/sculk_vein/sculk_vein3.json",
+        "assets/minecraft/items/alt/sculk_vein/sculk_vein4.json",
+        "assets/minecraft/items/alt/sculk_vein/sculk_vein5.json",
+        "assets/minecraft/items/alt/sculk_vein/sculk_vein6.json",
+        "assets/minecraft/items/alt/sculk_vein/sculk_vein7.json"
+    ]
+}

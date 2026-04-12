@@ -1,0 +1,97 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"fresh_flowers_animation_right": {
+			"animation_length": 2.5,
+			"bones": {
+				"left_arm": {
+					"rotation": {
+						"0.0": {
+							"post": [-59, 0, -97],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2083": {
+							"post": [-3, 0, -72],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4583": {
+							"post": [-3, 0, -72],
+							"lerp_mode": "catmullrom"
+						},
+						"0.9583": {
+							"post": [-60, 0, -72],
+							"lerp_mode": "catmullrom"
+						}
+					},
+					"position": {
+						"0.0": {
+							"post": [-11.9, -4.9, -9.1],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2083": {
+							"post": [-11.9, -5.6, -12.6],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4583": {
+							"post": [-11.9, -1.4, -7.8],
+							"lerp_mode": "catmullrom"
+						},
+						"0.9583": {
+							"post": [-6, -0.5, -3.9],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			},
+			"timeline": {
+				"0.0": "dual_handed;anim_speed_1.3;"
+			}
+		},
+		"fresh_flowers_animation_left": {
+			"animation_length": 2.5,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"0.0": {
+							"post": [-59, 0, 97],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2083": {
+							"post": [-3, 0, 72],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4583": {
+							"post": [-3, 0, 72],
+							"lerp_mode": "catmullrom"
+						},
+						"0.9583": {
+							"post": [-60, 0, 72],
+							"lerp_mode": "catmullrom"
+						}
+					},
+					"position": {
+						"0.0": {
+							"post": [11.9, -4.9, -9.1],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2083": {
+							"post": [11.9, -5.6, -12.6],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4583": {
+							"post": [11.9, -1.4, -7.8],
+							"lerp_mode": "catmullrom"
+						},
+						"0.9583": {
+							"post": [6, -0.5, -3.9],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			},
+			"timeline": {
+				"0.0": "dual_handed;anim_speed_1.3;"
+			}
+		}
+	}
+}

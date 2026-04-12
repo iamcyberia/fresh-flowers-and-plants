@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/poppy/poppy1.json",
+        "assets/minecraft/items/alt/poppy/poppy2.json",
+        "assets/minecraft/items/alt/poppy/poppy3.json",
+        "assets/minecraft/items/alt/poppy/poppy4.json",
+        "assets/minecraft/items/alt/poppy/poppy5.json",
+        "assets/minecraft/items/alt/poppy/poppy6.json",
+        "assets/minecraft/items/alt/poppy/poppy7.json"
+    ]
+}

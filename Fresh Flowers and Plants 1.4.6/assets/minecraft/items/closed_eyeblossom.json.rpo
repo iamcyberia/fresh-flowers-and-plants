@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/closed_eyeblossom/closed_eyeblossom1.json",
+        "assets/minecraft/items/alt/closed_eyeblossom/closed_eyeblossom2.json",
+        "assets/minecraft/items/alt/closed_eyeblossom/closed_eyeblossom3.json",
+        "assets/minecraft/items/alt/closed_eyeblossom/closed_eyeblossom4.json",
+        "assets/minecraft/items/alt/closed_eyeblossom/closed_eyeblossom5.json",
+        "assets/minecraft/items/alt/closed_eyeblossom/closed_eyeblossom6.json",
+        "assets/minecraft/items/alt/closed_eyeblossom/closed_eyeblossom7.json"
+    ]
+}

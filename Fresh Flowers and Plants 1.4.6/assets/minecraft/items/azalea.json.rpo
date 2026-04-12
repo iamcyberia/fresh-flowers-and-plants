@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/azalea/azalea1.json",
+        "assets/minecraft/items/alt/azalea/azalea2.json",
+        "assets/minecraft/items/alt/azalea/azalea3.json",
+        "assets/minecraft/items/alt/azalea/azalea4.json",
+        "assets/minecraft/items/alt/azalea/azalea5.json",
+        "assets/minecraft/items/alt/azalea/azalea6.json",
+        "assets/minecraft/items/alt/azalea/azalea7.json"
+    ]
+}

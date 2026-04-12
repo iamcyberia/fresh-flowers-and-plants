@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/cornflower/cornflower1.json",
+        "assets/minecraft/items/alt/cornflower/cornflower2.json",
+        "assets/minecraft/items/alt/cornflower/cornflower3.json",
+        "assets/minecraft/items/alt/cornflower/cornflower4.json",
+        "assets/minecraft/items/alt/cornflower/cornflower5.json",
+        "assets/minecraft/items/alt/cornflower/cornflower6.json",
+        "assets/minecraft/items/alt/cornflower/cornflower7.json"
+    ]
+}

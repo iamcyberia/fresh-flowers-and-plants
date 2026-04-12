@@ -1,0 +1,12 @@
+{
+    condition: "!freshFlowersAndPlants.useModelsWhen.ground & !freshFlowersAndPlants.useModelsWhen.itemFrames & !freshFlowersAndPlants.useModelsWhen.gui",
+    fallbacks: [
+        "assets/minecraft/items/alt/kelp/kelp1.json",
+        "assets/minecraft/items/alt/kelp/kelp2.json",
+        "assets/minecraft/items/alt/kelp/kelp3.json",
+        "assets/minecraft/items/alt/kelp/kelp4.json",
+        "assets/minecraft/items/alt/kelp/kelp5.json",
+        "assets/minecraft/items/alt/kelp/kelp6.json",
+        "assets/minecraft/items/alt/kelp/kelp7.json"
+    ]
+}
